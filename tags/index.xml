@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Jack E Taylor</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on Jack E Taylor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>EEG</title>
+      <link>/tags/eeg/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/eeg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LexOPS</title>
+      <link>/tags/lexops/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/lexops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>N170</title>
+      <link>/tags/n170/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/n170/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>studies</title>
+      <link>/tags/studies/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/studies/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>psycholinguistics</title>
+      <link>/tags/psycholinguistics/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/psycholinguistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stimuli</title>
+      <link>/tags/stimuli/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/stimuli/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

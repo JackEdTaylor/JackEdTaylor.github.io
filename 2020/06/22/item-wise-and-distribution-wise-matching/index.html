@@ -338,11 +338,11 @@ seed_results &lt;- map_df(1:20000, function(seed_i) {
 ##  9     9  0.680         0.531
 ## 10    10  0.794         0.388
 ## # ... with 19,990 more rows</code></pre>
-<p>We really want a single value to optimise by. The simplest solution is to just take the sum. This can also be weighted if it’s more important for some variables to be matched than others (e.g. if you think age is a larger confound than face width).</p>
-<pre class="r"><code>seed_results &lt;- mutate(seed_results, ov_sum = ov_age + ov_face_width)</code></pre>
+<p>We really want a single value to optimise by. An easy solution is to just take the average. This can also be weighted if it’s more important for some variables to be matched than others (e.g. if you think age is a larger confound than face width).</p>
+<pre class="r"><code>seed_results &lt;- mutate(seed_results, ov_avg = (ov_age + ov_face_width)/2)</code></pre>
 <p>We can recreate the simulated samples using the desired seeds. This is how similar the male and female distributions are for the best random sample:</p>
 <pre class="r"><code>best_seed &lt;- seed_results %&gt;%
-  filter(ov_sum == max(ov_sum)) %&gt;%
+  filter(ov_avg == max(ov_avg)) %&gt;%
   pull(seed)
 
 set.seed(best_seed)
@@ -358,7 +358,7 @@ best_sample %&gt;%
 <p><img src="/post/2020-06-22_item_distribution_wise_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p>For comparison, here’s the worst sample:</p>
 <pre class="r"><code>worst_seed &lt;- seed_results %&gt;%
-  filter(ov_sum == min(ov_sum)) %&gt;%
+  filter(ov_avg == min(ov_avg)) %&gt;%
   pull(seed)
 
 set.seed(worst_seed)
@@ -373,7 +373,18 @@ worst_sample %&gt;%
   facet_wrap(vars(Parameter), scales=&quot;free&quot;)</code></pre>
 <p><img src="/post/2020-06-22_item_distribution_wise_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>Not bad considering! We could use the stimuli in <code>best_sample</code> for an experiment and be fairly confident that there are no large differences in age or face width. In our paper, we could report that we maximised distributional overlap using the overlap index <a href="http://doi.org/10.3389/fpsyg.2019.01089">Pastore &amp; Calcagni (2019)</a>, using 20000 random subsets of the data. The selected stimulus set resulted in an overlap index of 0.91 for age, and 0.84 for face width.</p>
-<p>It’s worth mentioning that you’ll get nicer matches as you run more iterations. The number of iterations you need to identify a suitable set will depend on things like the size of your stimulus pool and the number of variables you are trying to match.</p>
+<p>It’s worth mentioning that you’ll get nicer matches as you run more iterations. The number of iterations you need to identify a suitable set will depend on things like the size of your stimulus pool and the number of variables you are trying to match. In fact, we can plot this relationship with the data we have:</p>
+<pre class="r"><code>seed_results %&gt;%
+  mutate(
+    age = cummax(ov_age),
+    face_width = cummax(ov_face_width),
+    average = cummax(ov_avg)
+  ) %&gt;%
+  pivot_longer(c(age, face_width, average), names_to=&quot;dist&quot;, values_to=&quot;best_val&quot;) %&gt;%
+  ggplot(aes(seed, best_val, colour=dist, group=dist)) +
+  geom_line() +
+  labs(x = &quot;Iteration&quot;, y = &quot;Best Overlap Value&quot;, colour = &quot;Distribution&quot;)</code></pre>
+<p><img src="/post/2020-06-22_item_distribution_wise_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 <div id="conclusion" class="section level1">
 <h1>Conclusion</h1>

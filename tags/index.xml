@@ -6,53 +6,44 @@
     <description>Recent content in Tags on Jack E Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>EEG</title>
-      <link>/tags/eeg/</link>
-      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      <title>psycholinguistics</title>
+      <link>/tags/psycholinguistics/</link>
+      <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/eeg/</guid>
+      <guid>/tags/psycholinguistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>/tags/python/</link>
+      <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stimuli</title>
+      <link>/tags/stimuli/</link>
+      <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/stimuli/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LexOPS</title>
       <link>/tags/lexops/</link>
-      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/lexops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>N170</title>
-      <link>/tags/n170/</link>
-      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/n170/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>studies</title>
-      <link>/tags/studies/</link>
-      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/studies/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>psycholinguistics</title>
-      <link>/tags/psycholinguistics/</link>
       <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>/tags/psycholinguistics/</guid>
+      <guid>/tags/lexops/</guid>
       <description></description>
     </item>
     
@@ -62,15 +53,6 @@
       <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>stimuli</title>
-      <link>/tags/stimuli/</link>
-      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/stimuli/</guid>
       <description></description>
     </item>
     

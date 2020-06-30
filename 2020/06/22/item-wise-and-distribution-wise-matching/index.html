@@ -381,7 +381,7 @@ worst_sample %&gt;%
 <p><img src="/post/2020-06-22_item_distribution_wise_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>Not bad considering! We could use the stimuli in <code>best_sample</code> for an experiment and be fairly confident that there are no large differences in age or face width. In our paper, we could report that:</p>
 <blockquote>
-<p>“We selected a stimulus set which maximised distributional overlap, measured with the assumption-free overlap index <a href="http://doi.org/10.3389/fpsyg.2019.01089">Pastore &amp; Calcagni (2019)</a>, from 20000 randomly created lists of 50 male and 50 female faces. The selected stimulus set resulted in an overlap index of 0.91 for age, and 0.84 for face width”.</p>
+<p>“We selected a stimulus set which maximised distributional overlap, measured with the assumption-free overlap index <a href="http://doi.org/10.3389/fpsyg.2019.01089">Pastore &amp; Calcagni (2019)</a>, from 20000 randomly created lists of 50 male and 50 female faces. The selected stimulus set resulted in an overlap index of 0.91 for age, and 0.84 for face width.”</p>
 </blockquote>
 <p>It’s worth mentioning that you’ll get nicer matches as you run more iterations. The number of iterations you need to identify a suitable set will depend on things like the size of your stimulus pool and the number of variables you are trying to match. The more iterations you run the algorithm for, the better a result you’ll find. Here’s a plot demonstrating that for the iterations I ran above:</p>
 <pre class="r"><code>seed_results %&gt;%

@@ -17,8 +17,9 @@
       <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/2020/06/22/item-wise-and-distribution-wise-matching/</guid>
-      <description>I’m often surprised just how many papers in Psycholinguistics (and elsewhere I’m sure) give such little detail about their stimuli. My pet hate is when papers try to show that stimuli are controlled by reporting non-significant p values from t-tests or ANOVAs on the differences in confounds between conditions. This is a problem because:
-You’re assuming normality in the distributions. Especially for small samples of stimuli, this is unlikely to be the case.</description>
+      <description>“Words were controlled between conditions for frequency and length (all F values &amp;lt; 1).”
+How many times have you read a paper with a sentence like this in the Materials section? My pet hate is when papers try to show that stimuli are controlled by reporting non-significant p values from t-tests or ANOVAs on the differences in confounds between conditions. This is a problem because of:
+Statistical reasons: They’re assuming normality in the distributions.</description>
     </item>
     
   </channel>

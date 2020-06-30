@@ -232,14 +232,17 @@ $(document).ready(function(){
     <br> <div class="text-justify">
 
 
-<p>I’m often surprised just how many papers in Psycholinguistics (and elsewhere I’m sure) give such little detail about their stimuli. My pet hate is when papers try to show that stimuli are controlled by reporting non-significant p values from t-tests or ANOVAs on the differences in confounds between conditions. This is a problem because:</p>
+<blockquote>
+<p>“Words were controlled between conditions for frequency and length (all F values &lt; 1).”</p>
+</blockquote>
+<p>How many times have you read a paper with a sentence like this in the Materials section? My pet hate is when papers try to show that stimuli are controlled by reporting non-significant p values from t-tests or ANOVAs on the differences in confounds between conditions. This is a problem because of:</p>
 <ol style="list-style-type: decimal">
-<li><p>You’re assuming normality in the distributions. Especially for small samples of stimuli, this is unlikely to be the case.</p></li>
-<li><p>More importantly, a non-significant difference in the raw values does not mean there is no confounding effect. A small but “non-significant” difference in a confounding variable could have a very real and noticeable effect on your outcome when you repeat the same stimuli across hundreds of trials and many subjects.</p></li>
+<li><p>Statistical reasons: They’re assuming normality in the distributions. Especially for small samples of stimuli, this is unlikely to be the case. More importantly, a non-significant difference in the raw values does not mean there is no confounding effect. A small but “non-significant” difference in a confounding variable could have a very real and noticeable effect on an outcome when you repeat the same stimuli across hundreds of trials and many subjects.</p></li>
+<li><p>Ambiguity: What corpus of frequency did they use? Exactly how well controlled are the stimuli? As with every other aspect of the design, we should give each other enough detail to reproduce the process exactly.</p></li>
 </ol>
-<p>So what’s the solution? Well, you could check your distributional assumptions and use an equivalence test to find evidence of practical equivalence, but then we’re still acting like the stimuli just spontaneously appeared on our doorstep one day, and we decided on a whim to use them in a study.</p>
-<p>The truth is we have total control over what stimuli we use. Instead, then, it makes sense to focus on precisely specifying how closely we want our stimuli to be matched. There are broadly two approaches to controlling for confounding variables in this way. The first approach is <strong>item-wise matching</strong>, in which each item from condition <em>a</em> is matched in terms of the confounding variable within a certain tolerance to an item in condition <em>b</em>. The second approach, <strong>distribution-wise matching</strong>, is a less powerful but more flexible alternative, in which the overall distributions of confounding variables between conditions <em>a</em> and <em>b</em> are matched in shape. In this post, I’ll show example implementations of these approaches in R, and briefly discuss their differences.</p>
-<p>In case you want to follow along at home, here’s the code to simulate the data I’ll be using:</p>
+<p>So what’s the solution? Well, we could check your distributional assumptions and use an equivalence test to find evidence of practical equivalence (see <a href="http://doi.org/10.1177/2515245918770963">Lakens et al., 2018</a> for a good tutorial), but then we’re still acting like the stimuli just randomly appeared on our doorstep one day, and we decided on a whim to use them in a study.</p>
+<p>The truth is we have complete control over what stimuli we use. Instead, then, it makes sense to focus on precisely specifying how closely our stimuli are matched. There are broadly two approaches to controlling for confounding variables in this way. The first approach is <strong>item-wise matching</strong>, in which each item from condition <em>a</em> is matched in terms of the confounding variable within a certain tolerance to an item in condition <em>b</em>. The second approach, <strong>distribution-wise matching</strong>, is a less powerful but more flexible alternative, in which the overall distributions of confounding variables between conditions <em>a</em> and <em>b</em> are matched in shape. In this post, I’ll show example implementations of these approaches in R, and briefly discuss their differences.</p>
+<p>In case you want to follow along at home, here’s the code to simulate the data I’ll be using. This dataframe is an imaginary database of face images for a study we’ll imagine we’re running on face perception:</p>
 <pre class="r"><code>library(tidyverse)
 n_stim &lt;- 1000
 set.seed(1)
@@ -253,7 +256,7 @@ face_stim &lt;- tibble(
   mutate(face_width = if_else(gender==&quot;f&quot;, face_width-2.5, face_width))</code></pre>
 <div id="item-wise-matching" class="section level1">
 <h1>Item-Wise Matching</h1>
-<p>Something I’ve worked on quite a bit for the last couple of years has been my R package, <a href="http://doi.org/10.3758/s13428-020-01389-1">LexOPS</a>. If you’re interested in finding out more, there’s an <a href="https://jackedtaylor.github.io/LexOPSdocs/">online walkthrough</a> for the package. Long story short, it makes it easy to create lists of matched items for experiments. For example, imagine we have a list of faces that looks like this (gender simplified to female/male for these purposes):</p>
+<p>Something I’ve worked on quite a bit for the last couple of years has been the R package, <a href="http://doi.org/10.3758/s13428-020-01389-1">LexOPS</a>. If you’re interested in finding out more, there’s an <a href="https://jackedtaylor.github.io/LexOPSdocs/">online walkthrough</a> for the package. Long story short, it makes it easy to create lists of matched items for experiments. For example, imagine we have a database of faces that looks like this:</p>
 <pre class="r"><code>face_stim
 ## # A tibble: 1,000 x 4
 ##    stim_id gender   age face_width
@@ -289,7 +292,11 @@ gen_faces &lt;- face_stim %&gt;%
 <p>To visualise the generated stimuli, we can plot each face’s location in the age and face width distributions, with lines connecting male and female faces which are matched:</p>
 <pre class="r"><code>plot_design(gen_faces, include=&quot;controls&quot;)</code></pre>
 <p><img src="/post/2020-06-22_item_distribution_wise_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<p>We could use the stimulus lists in <code>gen_faces</code>, and be pretty certain that we have items in both condition which are comparable in the variables of age and face width. In our paper, we could say we matched male and female faces item-wise for age (within ±1 year) and face width (within ±0.5 cm). Item-wise matching is useful when you want to ensure items are as directly comparable as possible. The similarity in distributions is a necessary by-product, with the degree of distributional similarity for a given variable depending on how closely items are matched on it.</p>
+<p>We could use the stimulus lists in <code>gen_faces</code>, and be pretty certain that we have items in both condition which are comparable in the variables of age and face width. In our paper, we could say:</p>
+<blockquote>
+<p>“We matched male and female faces item-wise for age (within ±1 year) and face width (within ±0.5 cm).”</p>
+</blockquote>
+<p>Item-wise matching is useful when you want to ensure items are as directly comparable as possible. The similarity in distributions is a necessary by-product, with the degree of distributional similarity for a given variable depending on how closely items are matched on it, and how many items are used.</p>
 </div>
 <div id="distribution-wise-matching" class="section level1">
 <h1>Distribution-Wise Matching</h1>
@@ -372,7 +379,10 @@ worst_sample %&gt;%
   geom_density(alpha=0.5) +
   facet_wrap(vars(Parameter), scales=&quot;free&quot;)</code></pre>
 <p><img src="/post/2020-06-22_item_distribution_wise_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
-<p>Not bad considering! We could use the stimuli in <code>best_sample</code> for an experiment and be fairly confident that there are no large differences in age or face width. In our paper, we could report that we maximised distributional overlap using the overlap index <a href="http://doi.org/10.3389/fpsyg.2019.01089">Pastore &amp; Calcagni (2019)</a>, using 20000 random subsets of the data. The selected stimulus set resulted in an overlap index of 0.91 for age, and 0.84 for face width.</p>
+<p>Not bad considering! We could use the stimuli in <code>best_sample</code> for an experiment and be fairly confident that there are no large differences in age or face width. In our paper, we could report that:</p>
+<blockquote>
+<p>“We selected a stimulus set from 20000 random subsets of the data which maximised distributional overlap, measured with the assumption-free overlap index <a href="http://doi.org/10.3389/fpsyg.2019.01089">Pastore &amp; Calcagni (2019)</a>. The selected stimulus set resulted in an overlap index of 0.91 for age, and 0.84 for face width”.</p>
+</blockquote>
 <p>It’s worth mentioning that you’ll get nicer matches as you run more iterations. The number of iterations you need to identify a suitable set will depend on things like the size of your stimulus pool and the number of variables you are trying to match. The more iterations you run the algorithm for, the better a result you’ll find. Here’s a plot demonstrating that for the iterations I ran above:</p>
 <pre class="r"><code>seed_results %&gt;%
   mutate(
@@ -388,9 +398,8 @@ worst_sample %&gt;%
 </div>
 <div id="conclusion" class="section level1">
 <h1>Conclusion</h1>
-<p>Distribution-wise and item-wise matching are different approaches to solving the same problem. I would argue item-wise matching is a more powerful way of actually controlling for confounds, as you have sets of items which are directly comparable on all dimensions. On the other hand, the distribution-wise approach is very flexible - the pipeline can easily be altered to optimise parameters other than overlap, for example, or to maximise the similarity to the population distribution (if known).</p>
-<p>I personally prefer to control for confounds item-wise, but distribution-wise matching can be very useful in situations when item-wise matching is unfeasible. There’s also no reason why you can’t apply both methods, for example controlling for confounds between levels of a predictor with item-wise matching, and implementing a counterbalanced design with distribution-wise matching.</p>
-<p>Finally, both of these methods are of course limited by the information you give them. If there were enormous differences in face width between males and females, for example, you would really struggle to match face width, and the stimuli you end up using are unlikely to be representative of the population.</p>
+<p>Distribution-wise and item-wise matching are different approaches to solving the same problem. Item-wise matching ihas the advantage of giving sets of items which are directly comparable on all dimensions. On the other hand, the distribution-wise approach is very flexible - the pipeline can easily be altered to optimise parameters other than overlap, for example, or to maximise the similarity to the population distribution (if known). There’s also no reason why you can’t apply both methods, for example controlling for confounds between levels of a predictor with item-wise matching, and implementing a counterbalanced design with distribution-wise matching.</p>
+<p>Finally, these methods are reproducible! This means we can share the code and resulting stimuli along with papers, so other scientists can easily see what we did, and try to replicate effects or alter the pipelines for their own purposes, for instance adding additional controls. In other words, be specific, be reproducible, and share your code!</p>
 </div>
 </div>
 

@@ -6,7 +6,7 @@
     <description>Recent content in R on Jack E Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Mon, 22 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
@@ -22,10 +22,10 @@
     
     <item>
       <title>Item-Wise and Distribution-Wise Matching</title>
-      <link>/2020/06/22/item-wise-and-distribution-wise-matching/</link>
-      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      <link>/2020/07/06/item-wise-and-distribution-wise-matching/</link>
+      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>/2020/06/22/item-wise-and-distribution-wise-matching/</guid>
+      <guid>/2020/07/06/item-wise-and-distribution-wise-matching/</guid>
       <description>“Words were controlled between conditions for frequency and length (all F values &amp;lt; 1).”
 How many times have you read a paper with a sentence like this in the Materials section? This is my pet hate. This is a problem because of:
 Statistical reasons: They’re assuming normality in the distributions. It’s fairly unlikely all of your variables are normally distributed. More importantly though, a non-significant difference in the raw values does not mean there is no confounding effect.</description>

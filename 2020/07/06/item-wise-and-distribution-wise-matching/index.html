@@ -295,7 +295,7 @@ gen_faces &lt;- face_stim %&gt;%
 ## 5       5 face_819 face_729         A2</code></pre>
 <p>To visualise the generated stimuli, we can plot each face’s location in the age and face width distributions, with lines connecting male and female faces which are matched:</p>
 <pre class="r"><code>plot_design(gen_faces, include=&quot;controls&quot;)</code></pre>
-<p><img src="/post/2020-06-22_item_distribution_wise_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="/post/2020-07-06_item_distribution_wise_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>We could use the stimulus lists in <code>gen_faces</code>, and be pretty certain that we have items in both condition which are comparable in the variables of age and face width. In our paper, we could say:</p>
 <blockquote>
 <p>“Stimuli consisted of 50 matched pairs of male and female faces, matched in terms of age (within ±1 year) and face width (within ±0.5 cm).”</p>
@@ -366,7 +366,7 @@ best_sample %&gt;%
   ggplot(aes(Value, fill=gender)) +
   geom_density(alpha=0.5) +
   facet_wrap(vars(Parameter), scales=&quot;free&quot;)</code></pre>
-<p><img src="/post/2020-06-22_item_distribution_wise_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="/post/2020-07-06_item_distribution_wise_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 <p>For comparison, here’s the worst sample:</p>
 <pre class="r"><code>worst_seed &lt;- seed_results %&gt;%
   filter(ov_avg == min(ov_avg)) %&gt;%
@@ -382,7 +382,7 @@ worst_sample %&gt;%
   ggplot(aes(Value, fill=gender)) +
   geom_density(alpha=0.5) +
   facet_wrap(vars(Parameter), scales=&quot;free&quot;)</code></pre>
-<p><img src="/post/2020-06-22_item_distribution_wise_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="/post/2020-07-06_item_distribution_wise_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>Not bad considering! We could use the stimuli in <code>best_sample</code> for an experiment and be fairly confident that there are no large differences in age or face width. In our paper, we could report that:</p>
 <blockquote>
 <p>“We selected a stimulus set which maximised distributional overlap, measured with the assumption-free overlap index <a href="http://doi.org/10.3389/fpsyg.2019.01089">Pastore &amp; Calcagni (2019)</a>, from 20000 randomly created lists of 50 male and 50 female faces. The selected stimulus set resulted in an overlap index of 0.91 for age, and 0.84 for face width.”</p>
@@ -398,7 +398,7 @@ worst_sample %&gt;%
   ggplot(aes(seed, best_val, colour=dist, group=dist)) +
   geom_line() +
   labs(x = &quot;Iteration&quot;, y = &quot;Best Overlap Value&quot;, colour = &quot;Distribution&quot;)</code></pre>
-<p><img src="/post/2020-06-22_item_distribution_wise_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><img src="/post/2020-07-06_item_distribution_wise_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 <div id="summary" class="section level1">
 <h1>Summary</h1>

@@ -236,16 +236,16 @@ $(document).ready(function(){
 <p>“Words were controlled between conditions for frequency and length (all F values &lt; 1).”</p>
 </blockquote>
 <p>How many times have you read a paper with a sentence like this in the Materials section? This is my pet hate. This is a problem because of:</p>
-<ol style="list-style-type: decimal">
-<li><p>Statistical reasons: They’re assuming normality in the distributions. It’s fairly unlikely all of your variables are normally distributed. More importantly though, a non-significant difference in the raw values does not mean there is no confounding effect. A small but “non-significant” difference in a confounding variable could have a very real and noticeable effect on an outcome when you repeat the same stimuli across hundreds of trials and many subjects.</p></li>
-<li><p>Ambiguity: What corpus of frequency did they use? Exactly how well controlled are the stimuli? No one can read that sentence and exactly reproduce the stimulus list.</p></li>
-</ol>
-<p>So what’s the solution? Well, we could check your distributional assumptions and use an equivalence test to find evidence of practical equivalence (see <a href="http://doi.org/10.1177/2515245918770963">Lakens et al., 2018</a> for a good tutorial), but then we’re still acting like the stimuli just randomly appeared on our doorstep one day, and we decided on a whim to use them in a study.</p>
-<p>The truth is we have complete control over what stimuli we use. Instead, then, it makes sense to focus on precisely specifying how our stimuli are matched. There are two main approaches to controlling for confounding variables in this way.</p>
 <ul>
-<li><p><strong>item-wise matching</strong>, in which each item from condition <em>a</em> is matched in terms of the confounding variables within a certain tolerance to an item in condition <em>b</em></p></li>
-<li><p><strong>distribution-wise matching</strong>, in which the overall distributions of confounding variables between conditions <em>a</em> and <em>b</em> are matched.</p></li>
+<li><p>Statistical reasons: They’re assuming all kinds of things about their variables (e.g. that all the variables are normally distributed), and more importantly, interpreting a non-significant p-value as evidence for equivalence. A small but “non-significant” difference in a confounding variable could have a very real and noticeable effect on an outcome when you repeat the same stimuli across hundreds of trials and many subjects.</p></li>
+<li><p>Ambiguity: What corpus of frequency did they use? Exactly how well controlled are the stimuli? No one can read that sentence and exactly reproduce the process you used to create your stimuli.</p></li>
 </ul>
+<p>So what’s the solution? Well, we could check your distributional assumptions and use an equivalence test to find evidence of practical equivalence (see <a href="http://doi.org/10.1177/2515245918770963">Lakens et al., 2018</a> for a good tutorial), but then we’re still acting like the stimuli just randomly appeared on our doorstep one day, and we decided on a whim to use them in a study.</p>
+<p>The truth is we have complete control over what stimuli we use. Instead, then, it makes sense to focus on precisely specifying how our stimuli are matched. There are two main approaches to controlling for confounding variables in this way, when you are sampling from a finite number of possible stimuli (e.g. as is the case for a database of words or faces).</p>
+<ol style="list-style-type: decimal">
+<li><p><a href="#item-wise-matching"><strong>item-wise matching</strong></a>, in which each item from condition <em>a</em> is matched in terms of the confounding variables within a certain tolerance to an item in condition <em>b</em></p></li>
+<li><p><a href="#distribution-wise-matching"><strong>distribution-wise matching</strong></a>, in which the overall distributions of confounding variables between conditions <em>a</em> and <em>b</em> are matched.</p></li>
+</ol>
 <p>In this post, I’ll show example implementations of these approaches in R, and briefly discuss their differences. In case you want to follow along at home, here’s the code to simulate the data I’ll be using. This dataframe is an imaginary database of face images for a study we’ll imagine we’re running on face perception:</p>
 <pre class="r"><code>library(tidyverse)
 n_stim &lt;- 1000
@@ -404,7 +404,7 @@ worst_sample %&gt;%
 <h1>Summary</h1>
 <p>Distribution-wise and item-wise matching are two different ways to controlling your stimuli. Item-wise matching has the advantage of giving sets of items which are directly comparable on all dimensions. On the other hand, the distribution-wise approach is very flexible - the pipeline can easily be altered to optimise parameters other than overlap, for example, or to maximise the similarity to the population distribution (if known) if you’re especially interested in generalisability. There’s also no reason why you can’t use a combination of the methods, for example controlling for confounds between levels of a predictor with item-wise matching, and implementing a counterbalanced design with distribution-wise matching.</p>
 <p>These methods are reproducible! This means we can share the code and resulting stimuli along with papers, so other researchers can easily see what we did, and try to replicate effects or alter the pipelines for their own purposes, for instance adding additional controls.</p>
-<p>In other words, be specific, be reproducible, share your stimuli, and share your code!</p>
+<p>In other words: be specific, be reproducible, share your stimuli, and share your code!</p>
 </div>
 </div>
 

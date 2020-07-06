@@ -298,7 +298,7 @@ gen_faces &lt;- face_stim %&gt;%
 <p><img src="/post/2020-07-06_item_distribution_wise_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>We could use the stimulus lists in <code>gen_faces</code>, and be pretty certain that we have items in both condition which are comparable in the variables of age and face width. In our paper, we could say:</p>
 <blockquote>
-<p>“Stimuli consisted of 50 matched pairs of male and female faces, matched in terms of age (within ±1 year) and face width (within ±0.5 cm).”</p>
+<p>“Stimuli consisted of 50 matched pairs of male and female faces, matched in terms of age (within ±1 year) and face width (within ±0.5 cm), generated with LexOPS (Taylor et al., 2020). The code used to generate the stimuli is available at osf.io/osflinkhere.”</p>
 </blockquote>
 <p>Item-wise matching is useful when you want to ensure items are as directly comparable as possible. The similarity in distributions is a necessary by-product, with the degree of distributional similarity for a given variable depending on how closely items are matched on it, and how many items are used.</p>
 </div>
@@ -385,7 +385,7 @@ worst_sample %&gt;%
 <p><img src="/post/2020-07-06_item_distribution_wise_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>Not bad considering! We could use the stimuli in <code>best_sample</code> for an experiment and be fairly confident that there are no large differences in age or face width. In our paper, we could report that:</p>
 <blockquote>
-<p>“We selected a stimulus set which maximised distributional overlap, measured with the assumption-free overlap index <a href="http://doi.org/10.3389/fpsyg.2019.01089">Pastore &amp; Calcagni (2019)</a>, from 20000 randomly created lists of 50 male and 50 female faces. The selected stimulus set resulted in an overlap index of 0.91 for age, and 0.84 for face width.”</p>
+<p>“We selected a stimulus set which maximised distributional overlap, measured with the assumption-free overlap index <a href="http://doi.org/10.3389/fpsyg.2019.01089">Pastore &amp; Calcagni (2019)</a>, from 20000 randomly created lists of 50 male and 50 female faces. The selected stimulus set resulted in an overlap index of 0.91 for age, and 0.84 for face width. The code used to generate the stimuli is available at osf.io/osflinkhere.”</p>
 </blockquote>
 <p>It’s worth mentioning that you’ll get nicer matches as you run more iterations. The number of iterations you need to identify a suitable set will depend on things like the size of your stimulus pool and the number of variables you are trying to match. The more iterations you run the algorithm for, the better a result you’ll find. Here’s a plot demonstrating that for the iterations I ran above:</p>
 <pre class="r"><code>seed_results %&gt;%

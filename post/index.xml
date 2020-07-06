@@ -18,8 +18,8 @@
       
       <guid>/2020/06/22/item-wise-and-distribution-wise-matching/</guid>
       <description>“Words were controlled between conditions for frequency and length (all F values &amp;lt; 1).”
-How many times have you read a paper with a sentence like this in the Materials section? My pet hate is when papers try to show that stimuli are controlled by reporting non-significant p values from t-tests or ANOVAs on the differences in confounds between conditions. This is a problem because of:
-Statistical reasons: They’re assuming normality in the distributions.</description>
+How many times have you read a paper with a sentence like this in the Materials section? This is my pet hate. This is a problem because of:
+Statistical reasons: They’re assuming normality in the distributions. It’s fairly unlikely all of your variables are normally distributed. More importantly though, a non-significant difference in the raw values does not mean there is no confounding effect.</description>
     </item>
     
   </channel>

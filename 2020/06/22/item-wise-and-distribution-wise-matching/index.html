@@ -235,14 +235,18 @@ $(document).ready(function(){
 <blockquote>
 <p>“Words were controlled between conditions for frequency and length (all F values &lt; 1).”</p>
 </blockquote>
-<p>How many times have you read a paper with a sentence like this in the Materials section? My pet hate is when papers try to show that stimuli are controlled by reporting non-significant p values from t-tests or ANOVAs on the differences in confounds between conditions. This is a problem because of:</p>
+<p>How many times have you read a paper with a sentence like this in the Materials section? This is my pet hate. This is a problem because of:</p>
 <ol style="list-style-type: decimal">
-<li><p>Statistical reasons: They’re assuming normality in the distributions. Especially for small samples of stimuli, this is unlikely to be the case. More importantly, a non-significant difference in the raw values does not mean there is no confounding effect. A small but “non-significant” difference in a confounding variable could have a very real and noticeable effect on an outcome when you repeat the same stimuli across hundreds of trials and many subjects.</p></li>
-<li><p>Ambiguity: What corpus of frequency did they use? Exactly how well controlled are the stimuli? As with every other aspect of the design, we should give each other enough detail to reproduce the process exactly.</p></li>
+<li><p>Statistical reasons: They’re assuming normality in the distributions. It’s fairly unlikely all of your variables are normally distributed. More importantly though, a non-significant difference in the raw values does not mean there is no confounding effect. A small but “non-significant” difference in a confounding variable could have a very real and noticeable effect on an outcome when you repeat the same stimuli across hundreds of trials and many subjects.</p></li>
+<li><p>Ambiguity: What corpus of frequency did they use? Exactly how well controlled are the stimuli? No one can read that sentence and exactly reproduce the stimulus list.</p></li>
 </ol>
 <p>So what’s the solution? Well, we could check your distributional assumptions and use an equivalence test to find evidence of practical equivalence (see <a href="http://doi.org/10.1177/2515245918770963">Lakens et al., 2018</a> for a good tutorial), but then we’re still acting like the stimuli just randomly appeared on our doorstep one day, and we decided on a whim to use them in a study.</p>
-<p>The truth is we have complete control over what stimuli we use. Instead, then, it makes sense to focus on precisely specifying how closely our stimuli are matched. There are broadly two approaches to controlling for confounding variables in this way. The first approach is <strong>item-wise matching</strong>, in which each item from condition <em>a</em> is matched in terms of the confounding variable within a certain tolerance to an item in condition <em>b</em>. The second approach, <strong>distribution-wise matching</strong>, is a less powerful but more flexible alternative, in which the overall distributions of confounding variables between conditions <em>a</em> and <em>b</em> are matched in shape. In this post, I’ll show example implementations of these approaches in R, and briefly discuss their differences.</p>
-<p>In case you want to follow along at home, here’s the code to simulate the data I’ll be using. This dataframe is an imaginary database of face images for a study we’ll imagine we’re running on face perception:</p>
+<p>The truth is we have complete control over what stimuli we use. Instead, then, it makes sense to focus on precisely specifying how our stimuli are matched. There are two main approaches to controlling for confounding variables in this way.</p>
+<ul>
+<li><p><strong>item-wise matching</strong>, in which each item from condition <em>a</em> is matched in terms of the confounding variables within a certain tolerance to an item in condition <em>b</em></p></li>
+<li><p><strong>distribution-wise matching</strong>, in which the overall distributions of confounding variables between conditions <em>a</em> and <em>b</em> are matched.</p></li>
+</ul>
+<p>In this post, I’ll show example implementations of these approaches in R, and briefly discuss their differences. In case you want to follow along at home, here’s the code to simulate the data I’ll be using. This dataframe is an imaginary database of face images for a study we’ll imagine we’re running on face perception:</p>
 <pre class="r"><code>library(tidyverse)
 n_stim &lt;- 1000
 set.seed(1)
@@ -300,7 +304,7 @@ gen_faces &lt;- face_stim %&gt;%
 </div>
 <div id="distribution-wise-matching" class="section level1">
 <h1>Distribution-Wise Matching</h1>
-<p>An alternative approach is to just maximise the degree of distributional overlap between the groups. The approach I’m going to suggest here just maximises distributional overlap of two random samples of the dataset. To do this, I’m going to use the <code>overlapping</code> package (<a href="http://doi.org/10.3389/fpsyg.2019.01089">Pastore &amp; Calcagni, 2019</a>) to get an estimate of empirical distributional overlap. You could also match distributional parameters, for example matching the mean (<span class="math inline">\(\mu\)</span>) and standard deviation (<span class="math inline">\(\sigma\)</span>) of a normal distribution, but these require strict assumptions which are often inappropriate.</p>
+<p>An alternative approach is to just maximise the similarity between the groups’ distributions. The approach I’m going to suggest here just maximises distributional overlap of two random samples of the dataset. To do this, I’m going to use the <code>overlapping</code> package (<a href="http://doi.org/10.3389/fpsyg.2019.01089">Pastore &amp; Calcagni, 2019</a>) to get an estimate of empirical distributional overlap. You could also match distributional parameters, for example matching the mean (<span class="math inline">\(\mu\)</span>) and standard deviation (<span class="math inline">\(\sigma\)</span>) of a normal distribution, but these require strict assumptions which are often inappropriate.</p>
 <p>For 20000 iterations (this will take a while), here we take a random sample of 50 male faces, and 50 female faces, and record the degree of distributional overlap (using <code>purrr</code>’s <code>map_df()</code> function to record the output in a dataframe):</p>
 <pre class="r"><code>library(overlapping)
 
@@ -396,10 +400,11 @@ worst_sample %&gt;%
   labs(x = &quot;Iteration&quot;, y = &quot;Best Overlap Value&quot;, colour = &quot;Distribution&quot;)</code></pre>
 <p><img src="/post/2020-06-22_item_distribution_wise_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
-<div id="conclusion" class="section level1">
-<h1>Conclusion</h1>
-<p>Distribution-wise and item-wise matching are different approaches to solving the same problem. Item-wise matching has the advantage of giving sets of items which are directly comparable on all dimensions. On the other hand, the distribution-wise approach is very flexible - the pipeline can easily be altered to optimise parameters other than overlap, for example, or to maximise the similarity to the population distribution (if known). There’s also no reason why you can’t apply both methods, for example controlling for confounds between levels of a predictor with item-wise matching, and implementing a counterbalanced design with distribution-wise matching.</p>
-<p>Finally, these methods are reproducible! This means we can share the code and resulting stimuli along with papers, so other scientists can easily see what we did, and try to replicate effects or alter the pipelines for their own purposes, for instance adding additional controls. In other words, be specific, be reproducible, and share your code!</p>
+<div id="summary" class="section level1">
+<h1>Summary</h1>
+<p>Distribution-wise and item-wise matching are two different ways to controlling your stimuli. Item-wise matching has the advantage of giving sets of items which are directly comparable on all dimensions. On the other hand, the distribution-wise approach is very flexible - the pipeline can easily be altered to optimise parameters other than overlap, for example, or to maximise the similarity to the population distribution (if known) if you’re especially interested in generalisability. There’s also no reason why you can’t use a combination of the methods, for example controlling for confounds between levels of a predictor with item-wise matching, and implementing a counterbalanced design with distribution-wise matching.</p>
+<p>These methods are reproducible! This means we can share the code and resulting stimuli along with papers, so other researchers can easily see what we did, and try to replicate effects or alter the pipelines for their own purposes, for instance adding additional controls.</p>
+<p>In other words, be specific, be reproducible, share your stimuli, and share your code!</p>
 </div>
 </div>
 

@@ -117,8 +117,8 @@ $(document).ready(function(){
       <meta name="twitter:card" content="summary">
       <meta name="twitter:image" content="/jacktaylr1_320x370.png" >
       
-    <meta property="description" content="When designing stimuli, researchers are often very vague about how they created on their stimuli. Here, I introduce two specific and reproducible approaches: item-wise and distribution-wise matching. I cover the differences and how you might report them in a paper.">
-    <meta property="og:description" content="When designing stimuli, researchers are often very vague about how they created on their stimuli. Here, I introduce two specific and reproducible approaches: item-wise and distribution-wise matching. I cover the differences and how you might report them in a paper.">
+    <meta property="description" content="When designing stimuli, researchers are often very vague about how they created their stimuli. Here, I introduce two specific and reproducible approaches: item-wise and distribution-wise matching. I cover the differences and how you might report them in a paper.">
+    <meta property="og:description" content="When designing stimuli, researchers are often very vague about how they created their stimuli. Here, I introduce two specific and reproducible approaches: item-wise and distribution-wise matching. I cover the differences and how you might report them in a paper.">
     
     <meta name="twitter:creator" content="">
     <meta name="twitter:site" content="">
@@ -205,7 +205,7 @@ $(document).ready(function(){
 
     <h4><a href="/2020/07/06/item-wise-and-distribution-wise-matching/">Item-Wise and Distribution-Wise Matching</a></h4>
     <h5>July 6, 2020 - 8 minutes</h5>
-    <h5>When designing stimuli, researchers are often very vague about how they created on their stimuli. Here, I introduce two specific and reproducible approaches: item-wise and distribution-wise matching. I cover the differences and how you might report them in a paper.</h5>
+    <h5>When designing stimuli, researchers are often very vague about how they created their stimuli. Here, I introduce two specific and reproducible approaches: item-wise and distribution-wise matching. I cover the differences and how you might report them in a paper.</h5>
 
     
     
@@ -258,6 +258,9 @@ face_stim &lt;- tibble(
   face_width = rnorm(n_stim, 65, 2.5)
 ) %&gt;%
   mutate(face_width = if_else(gender==&quot;f&quot;, face_width-2.5, face_width))</code></pre>
+<p>
+   
+</p>
 <div id="item-wise-matching" class="section level1">
 <h1>Item-Wise Matching</h1>
 <p>Something I’ve worked on quite a bit for the last couple of years has been the R package, <a href="http://doi.org/10.3758/s13428-020-01389-1">LexOPS</a>. If you’re interested in finding out more, there’s an <a href="https://jackedtaylor.github.io/LexOPSdocs/">online walkthrough</a> for the package. Long story short, it makes it easy to create lists of matched items for experiments. For example, imagine we have a database of faces that looks like this:</p>
@@ -285,7 +288,7 @@ gen_faces &lt;- face_stim %&gt;%
   control_for(age, -1:1) %&gt;%
   control_for(face_width, -0.5:0.5) %&gt;%
   generate(50)</code></pre>
-<p>Which matches faces item-wise, so that male face <strong>i</strong> is comparable to female face <strong>i</strong>. Here are the first five matched pairs:</p>
+<p>This matches faces item-wise, so that male face <strong>i</strong> is comparable to female face <strong>i</strong>. Here are the first five matched pairs:</p>
 <pre class="r"><code>head(gen_faces, 5)
 ##   item_nr       A1       A2 match_null
 ## 1       1 face_474 face_375         A1
@@ -301,6 +304,9 @@ gen_faces &lt;- face_stim %&gt;%
 <p>“Stimuli consisted of 50 matched pairs of male and female faces, matched in terms of age (within ±1 year) and face width (within ±0.5 cm), generated with LexOPS (<a href="http://doi.org/10.3758/s13428-020-01389-1">Taylor et al., 2020</a>). The code used to generate the stimuli is available at osf.io/osflinkhere.”</p>
 </blockquote>
 <p>Item-wise matching is useful when you want to ensure items are as directly comparable as possible. The similarity in distributions is a necessary by-product, with the degree of distributional similarity for a given variable depending on how closely items are matched on it, and how many items are used.</p>
+<p>
+   
+</p>
 </div>
 <div id="distribution-wise-matching" class="section level1">
 <h1>Distribution-Wise Matching</h1>
@@ -385,7 +391,7 @@ worst_sample %&gt;%
 <p><img src="/post/2020-07-06_item_distribution_wise_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 <p>Not bad considering! We could use the stimuli in <code>best_sample</code> for an experiment and be fairly confident that there are no large differences in age or face width. In our paper, we could report that:</p>
 <blockquote>
-<p>“We selected a stimulus set which maximised distributional overlap, measured with the assumption-free overlap index <a href="http://doi.org/10.3389/fpsyg.2019.01089">Pastore &amp; Calcagni (2019)</a>, from 20000 randomly created lists of 50 male and 50 female faces. The selected stimulus set resulted in an overlap index of 0.91 for age, and 0.84 for face width. The code used to generate the stimuli is available at osf.io/osflinkhere.”</p>
+<p>“We selected a stimulus set which maximised distributional overlap, measured with the assumption-free overlap index (<a href="http://doi.org/10.3389/fpsyg.2019.01089">Pastore &amp; Calcagni, 2019</a>), from 20000 randomly generated lists of 50 male and 50 female faces. The selected stimulus set resulted in an overlap index of 0.91 for age, and 0.84 for face width. The code used to generate the stimuli is available at osf.io/osflinkhere.”</p>
 </blockquote>
 <p>It’s worth mentioning that you’ll get nicer matches as you run more iterations. The number of iterations you need to identify a suitable set will depend on things like the size of your stimulus pool and the number of variables you are trying to match. The more iterations you run the algorithm for, the better a result you’ll find. Here’s a plot demonstrating that for the iterations I ran above:</p>
 <pre class="r"><code>seed_results %&gt;%
@@ -399,6 +405,9 @@ worst_sample %&gt;%
   geom_line() +
   labs(x = &quot;Iteration&quot;, y = &quot;Best Overlap Value&quot;, colour = &quot;Distribution&quot;)</code></pre>
 <p><img src="/post/2020-07-06_item_distribution_wise_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>
+   
+</p>
 </div>
 <div id="summary" class="section level1">
 <h1>Summary</h1>
@@ -410,6 +419,51 @@ worst_sample %&gt;%
 
     
     
+
+    
+
+        <h4 class="page-header">Related</h4>
+
+         <div class="item">
+
+    
+    
+    
+
+    
+      
+      
+    
+
+    <h4><a href="/2020/07/30/data-driven-rope-analysis/">Data-Driven ROPE Analysis</a></h4>
+    <h5>July 30, 2020 - 9 minutes</h5>
+    <h5>The Region of Practical Equivalence (ROPE) method of hypothesis testing is fairly common, especially in Bayesian statistics. The trickiest part is deciding on the ROPE&#39;s size. If you can&#39;t decide on a sensible ROPE, one approach could be deriving the ROPE from features of the data. Here I show how you might use bootstrapping and permutations to decide on a ROPE.</h5>
+
+    
+    
+    <a href="/tags/r">
+        <kbd class="item-tag"> R </kbd>
+    </a>
+    
+    <a href="/tags/statistics">
+        <kbd class="item-tag"> statistics </kbd>
+    </a>
+    
+    <a href="/tags/bayesian">
+        <kbd class="item-tag"> Bayesian </kbd>
+    </a>
+    
+    <a href="/tags/bootstrap">
+        <kbd class="item-tag"> bootstrap </kbd>
+    </a>
+    
+    <a href="/tags/permutation">
+        <kbd class="item-tag"> permutation </kbd>
+    </a>
+    
+
+</div>
+ 
 
     
 

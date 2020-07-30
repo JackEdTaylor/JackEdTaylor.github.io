@@ -323,9 +323,9 @@ m3 &lt;- brm(y ~ grp, data = data3)</code></pre>
 <p>Here’s the function we’ll use for getting the bootstrapped, permuted data on each iteration:</p>
 <pre class="r"><code>bootstrap_permute &lt;- function(dat) {
   dat %&gt;%
-    # a) bootstrap: sample rows with replacement
+    # 1. bootstrap: sample rows with replacement
     slice_sample(replace=TRUE, prop=1) %&gt;%
-    # b) permute: sample grp without replacement
+    # 2. permute: sample grp without replacement
     mutate(grp = sample(grp))
 }</code></pre>
 <p>We can run this 500 times to get a list of 500 datasets we could’ve observed under the null hypothesis, for each of <code>data1</code>, <code>data2</code>, and <code>data3</code>:</p>

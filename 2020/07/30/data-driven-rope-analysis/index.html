@@ -234,11 +234,22 @@ $(document).ready(function(){
 
 
     <br> <div class="text-justify">
+<link href="/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
 
+<div id="about-this-post" class="section level1">
+<h1>About this post</h1>
+<p>I’ve decided to write a brief disclaimer about this post. Please, please, please don’t use this post for statistical advice. This post is mostly thinking out loud about a possible method of hypothesis testing, but in fact it just reinvents existing methods in a noisy way. Looking at the post again a few months later, I’m convinced it doesn’t tell us anything we can’t already garner from existing methods. Another problem with this supposed method is that this defeats the whole point of a ROPE. The ROPE is a Region of <em>Practical</em> Equivalence, tying the hypothesis to some practically relevant interpretation. Arbitrarily deciding on regions with data-driven analyses isn’t really practically informative.</p>
+<p>I’ve kept the post here for the sake of context because I know how annoying it is to follow a dead link.</p>
+<p>If you’re interested in the problems with this post, this twitter thread might be useful:
+<a href="https://twitter.com/robustgar/status/1288810686752137217" class="uri">https://twitter.com/robustgar/status/1288810686752137217</a></p>
+</div>
+<div id="the-original-problematic-post" class="section level1">
+<h1>The original (problematic) post</h1>
 <p>Hypothesis testing is a finicky business. The most common and traditional method, null-hypothesis significance testing (NHST) is actually pretty useful when all you want to know is whether your data is more extreme than you’d expect by chance, i.e. whether we have evidence against the null hypothesis. What about when your p-value is non-significant though? There’s a deep-seated temptation to incorrectly interpret this as evidence for the absence of an effect. In fact, this would be better described as a <em>lack of evidence</em> for the <em>presence</em> of an effect. This could indeed be because the null hypothesis is true, but it could also be because we just don’t have the data to support a conclusion either way. From a p-value, we have two possible situations:</p>
 <ul>
-<li><p><strong>It’s significant</strong>: Evidence against the null hypothesis. Hurray, another paper in the bag of publication-bias laden literature!</p></li>
+<li><p><strong>It’s significant</strong>: Evidence against the null hypothesis. Hurray, another paper in the bag!</p></li>
 <li><p><strong>It’s non-significant</strong>: *shrug* who knows?</p></li>
 </ul>
 <p>
@@ -290,6 +301,7 @@ data3 &lt;- tibble(
 <p>
    
 </p>
+</div>
 <div id="fit-the-model" class="section level1">
 <h1>1 - Fit the Model</h1>
 <p>Let’s build a simple model to each dataset, predicting <code>y</code> as a function of column <code>grp</code>. For simplicity, the default priors, model family, and sampling options will do.</p>

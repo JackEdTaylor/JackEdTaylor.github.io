@@ -6,7 +6,7 @@
     <description>Recent content on Jack E Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,15 +27,6 @@
       
       <guid>/project/02-randphase/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Data-Driven ROPE Analysis</title>
-      <link>/2020/07/30/data-driven-rope-analysis/</link>
-      <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/2020/07/30/data-driven-rope-analysis/</guid>
-      <description>Hypothesis testing is a finicky business. The most common and traditional method, null-hypothesis significance testing (NHST) is actually pretty useful when all you want to know is whether your data is more extreme than you’d expect by chance, i.e. whether we have evidence against the null hypothesis. What about when your p-value is non-significant though? There’s a deep-seated temptation to incorrectly interpret this as evidence for the absence of an effect.</description>
     </item>
     
     <item>

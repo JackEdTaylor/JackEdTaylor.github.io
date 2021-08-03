@@ -6,7 +6,7 @@
     <description>Recent content in R on Jack E Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Aug 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,12 +21,30 @@
     </item>
     
     <item>
+      <title>The Effect of Predictability on Word Form Processing in the N1</title>
+      <link>/project/02-n1_pred/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/project/02-n1_pred/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matching Stimuli (or Anything) Reproducibly</title>
+      <link>/project/03-sips2021/</link>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/project/03-sips2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Data-Driven ROPE Analysis</title>
       <link>/2020/07/30/data-driven-rope-analysis/</link>
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>/2020/07/30/data-driven-rope-analysis/</guid>
-      <description>About this postI’ve decided to write a brief disclaimer about this post. Please, please, please don’t use this post for statistical advice. This post is mostly thinking out loud about a possible method of hypothesis testing, but in fact it just reinvents existing methods in a noisy way. Looking at the post again a few months later, I’m convinced it doesn’t tell us anything we can’t already garner from existing methods.</description>
+      <description>About this postI’ve decided to write a brief disclaimer about this post. Please don’t use this post for statistical advice. This post was mostly thinking out loud about a possible method of hypothesis testing, but in fact it just reinvents existing methods in a noisy way. Looking at the post again a few months later, I think it doesn’t tell us anything we can’t already get from existing methods.</description>
     </item>
     
     <item>

@@ -115,7 +115,7 @@ $(document).ready(function(){
     <meta property="og:type" content="article">
       
       <meta name="twitter:card" content="summary">
-      <meta name="twitter:image" content="/jacktaylr1_320x370.png" >
+      <meta name="twitter:image" content="/jacketaylor_250x250.png" >
       
     <meta property="description" content="The Region of Practical Equivalence (ROPE) method of hypothesis testing is fairly common, especially in Bayesian statistics. The trickiest part is deciding on the ROPE&#39;s size. If you can&#39;t decide on a sensible ROPE, one approach could be deriving the ROPE from features of the data. Here I show how you might use bootstrapping and permutations to decide on a ROPE.">
     <meta property="og:description" content="The Region of Practical Equivalence (ROPE) method of hypothesis testing is fairly common, especially in Bayesian statistics. The trickiest part is deciding on the ROPE&#39;s size. If you can&#39;t decide on a sensible ROPE, one approach could be deriving the ROPE from features of the data. Here I show how you might use bootstrapping and permutations to decide on a ROPE.">
@@ -148,11 +148,11 @@ $(document).ready(function(){
                             
                                 <li><a href="/">Home</a></li>
                             
-                                <li><a href="/post/">Posts</a></li>
+                                <li><a href="/publication/">Publications</a></li>
                             
                                 <li><a href="/project/">Projects</a></li>
                             
-                                <li><a href="/tags/">Tags</a></li>
+                                <li><a href="/post/">Posts</a></li>
                             
                         </ul>
                     
@@ -165,11 +165,11 @@ $(document).ready(function(){
                             
                                 <li class="navbar-icon"><a href="https://www.linkedin.com/in/jackedtaylor/"><i class="fab fa-linkedin"></i></a></li>
                             
-                                <li class="navbar-icon"><a href="https://www.gla.ac.uk/schools/psychology/staff/jacktaylor/"><i class="fas fa-university"></i></a></li>
+                                <li class="navbar-icon"><a href="https://www.psy.gla.ac.uk/otherstaff/?id=JT002"><i class="fas fa-university"></i></a></li>
                             
                                 <li class="navbar-icon"><a href="https://orcid.org/0000-0003-4765-0118"><i class="fab fa-orcid"></i></a></li>
                             
-                                <li class="navbar-icon"><a href="mailto:Jack.Taylor@glasgow.ac.uk"><i class="far fa-envelope"></i></a></li>
+                                <li class="navbar-icon"><a href="mailto:j.taylor.3@research.glasgow.ac.uk"><i class="far fa-envelope"></i></a></li>
                             
                             <li id="night-mode-toggle">
     <input type="checkbox" id = "button-status"
@@ -238,8 +238,8 @@ $(document).ready(function(){
 
 <div id="about-this-post" class="section level1">
 <h1>About this post</h1>
-<p>I’ve decided to write a brief disclaimer about this post. Please, please, please don’t use this post for statistical advice. This post is mostly thinking out loud about a possible method of hypothesis testing, but in fact it just reinvents existing methods in a noisy way. Looking at the post again a few months later, I’m convinced it doesn’t tell us anything we can’t already garner from existing methods. Another problem with this supposed method is that this defeats the whole point of a ROPE. The ROPE is a Region of <em>Practical</em> Equivalence, tying the hypothesis to some practically relevant interpretation. Arbitrarily deciding on regions with data-driven analyses isn’t really practically informative.</p>
-<p>I’ve kept the post here for the sake of context because I know how annoying it is to follow a dead link.</p>
+<p>I’ve decided to write a brief disclaimer about this post. Please don’t use this post for statistical advice. This post was mostly thinking out loud about a possible method of hypothesis testing, but in fact it just reinvents existing methods in a noisy way. Looking at the post again a few months later, I think it doesn’t tell us anything we can’t already get from existing methods. Another problem with this supposed method is that this defeats the whole point of a ROPE. The ROPE is a Region of <em>Practical</em> Equivalence, tying the hypothesis to some practically relevant interpretation. Arbitrarily deciding on regions with data-driven analyses isn’t really informative.</p>
+<p>I’ve kept the post here because I know how annoying it is to follow a dead link.</p>
 <p>If you’re interested in the problems with this post, this twitter thread might be useful:
 <a href="https://twitter.com/robustgar/status/1288810686752137217" class="uri">https://twitter.com/robustgar/status/1288810686752137217</a></p>
 </div>
@@ -253,7 +253,7 @@ $(document).ready(function(){
 <p>
    
 </p>
-<p>In Bayesian statistics, the Region of Practical Equivalence (ROPE) method is a fairly common approach to hypothesis testing which allows us to distinguish this “<em>*shrug* who knows?</em>” category into either inconclusive evidence, or evidence in favour of the null hypothesis. If it’s new to you, <a href="http://doi.org/10.1177/2515245918771304">Kruschke (2018)</a> gives a good introduction to the ROPE method which I’d recommend. Using the ROPE method, we accept a null hypothesis if the credible interval of the relevant posterior distribution lies entirely within the ROPE. We reject a null hypothesis if the credible interval is entirely outside of the ROPE, and we remain undecided if there is partial overlap between the credible interval and the ROPE.</p>
+<p>In Bayesian statistics, the Region of Practical Equivalence (ROPE) method is a fairly common approach to hypothesis testing which allows us to distinguish this “<em>*shrug* who knows?</em>” category into either inconclusive evidence, or evidence in favour of the null hypothesis. If it’s new to you, <a href="http://doi.org/10.1177/2515245918771304">Kruschke (2018)</a> gives a good introduction to the ROPE method. Using the ROPE method, we accept a null hypothesis if the credible interval of the relevant posterior distribution lies entirely within the ROPE. We reject a null hypothesis if the credible interval is entirely outside of the ROPE, and we remain undecided if there is partial overlap between the credible interval and the ROPE.</p>
 <p><img src="/post/2020-07-30_data-driven-rope_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <p>
    

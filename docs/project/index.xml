@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Jack E Taylor</title>
+    <link>/project/</link>
+    <description>Recent content in Projects on Jack E Taylor</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-uk</language>
+    <lastBuildDate>Sun, 01 Aug 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>LexOPS</title>
+      <link>/project/01-lexops/</link>
+      <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/project/01-lexops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LexOPS Walkthrough</title>
+      <link>/project/02-lexops_walkthrough/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/project/02-lexops_walkthrough/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>The Effect of Predictability on Word Form Processing in the N1</title>
+      <link>/project/03-n1_pred/</link>
+      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/project/03-n1_pred/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matching Stimuli (or Anything) Reproducibly</title>
+      <link>/project/04-sips2021/</link>
+      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/project/04-sips2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Phase-Randomising Text</title>
+      <link>/project/99-randphase/</link>
+      <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/project/99-randphase/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

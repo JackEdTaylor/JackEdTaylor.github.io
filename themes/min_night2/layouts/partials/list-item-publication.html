@@ -1,0 +1,89 @@
+<div class="item">
+
+{{ with .Params.journal }}
+{{ $journal := default "" $.Params.journal }}
+{{ if ne "" $journal }}
+{{ printf ", " | $.Scratch.Set "journalcomma" }}
+{{ end }}
+{{ end }}
+
+{{ with .Params.volume }}
+{{ $volume := default "" $.Params.volume }}
+{{ if ne "" $volume }}
+{{ printf ", " | $.Scratch.Set "volumecomma" }}
+{{ end }}
+{{ end }}
+
+{{ with .Params.issue }}
+{{ $issue := default "" $.Params.issue }}
+{{ if ne "" $issue }}
+{{ printf ", " | $.Scratch.Set "volumecomma" }}
+{{ end }}
+{{ end }}
+
+{{ with .Params.pages }}
+{{ $pages := default "" $.Params.pages }}
+{{ if ne "" $pages }}
+{{ printf ". " | $.Scratch.Set "pagesdot" }}
+{{ end }}
+{{ end }}
+
+{{ with .Params.doi }}
+{{ $doi := default "" $.Params.doi }}
+{{ if ne "" $doi }}
+{{ printf "https://doi.org/%s" . | $.Scratch.Set "doi" }}
+{{ end }}
+{{ end }}
+
+{{ with .Params.peer_reviewed_paper }}
+{{ $peer_reviewed_paper := default "" $.Params.peer_reviewed_paper }}
+{{ if ne "" $peer_reviewed_paper }}
+{{ printf "<li style='display: inline; padding-right: 10px;'><i class='fas fa-microscope'></i> <a href=%s>peer-reviewed paper</a></li>" . | $.Scratch.Set "peer_reviewed_paper" }}
+{{ end }}
+{{ end }}
+
+{{ with .Params.preprint }}
+{{ $preprint := default "" $.Params.preprint }}
+{{ if ne "" $preprint }}
+{{ printf "<li style='display: inline; padding-right: 10px; white-space: nowrap;'><i class='fas fa-file-pdf'></i> <a href=%s>preprint</a></li>" . | $.Scratch.Set "preprint" }}
+{{ end }}
+{{ end }}
+
+{{ with .Params.github }}
+{{ $github := default "" $.Params.github }}
+{{ if ne "" $github }}
+{{ printf "<li style='display: inline; padding-right: 10px; white-space: nowrap;'><i class='fab fa-github'></i> <a href=%s>github</a></li>" . | $.Scratch.Set "github" }}
+{{ end }}
+{{ end }}
+
+{{ with .Params.osf }}
+{{ $osf := default "" $.Params.osf }}
+{{ if ne "" $osf }}
+{{ printf "<li style='display: inline; padding-right: 10px; white-space: nowrap;'><i class='fa fa-box-open'></i> <a href=%s>osf</a></li>" . | $.Scratch.Set "osf" }}
+{{ end }}
+{{ end }}
+
+{{ with .Params.video }}
+{{ $video := default "" $.Params.video }}
+{{ if ne "" $video }}
+{{ printf "<li style='display: inline; padding-right: 10px; white-space: nowrap;'><i class='fas fa-video'></i> <a href=%s>video</a></li>" . | $.Scratch.Set "osf" }}
+{{ end }}
+{{ end }}
+
+    <h4 align="left">
+      <ul>
+        <li>
+          {{ .Params.authors }} ({{ .Params.year }}). {{ .Params.title }}. <i>{{ .Params.journal }}</i>{{ .Scratch.Get "journalcomma" }}<i>{{ .Params.issue }}</i>{{ .Scratch.Get "volume" }}{{ .Scratch.Get "volumecomma" }}{{ .Params.pages }}{{ .Scratch.Get "pagesdot" }}<a href={{ .Scratch.Get "doi" }}>{{ .Scratch.Get "doi" }}</a>
+          <br></br>
+          <ul>
+            {{ .Scratch.Get "peer_reviewed_paper" | safeHTML }}
+            {{ .Scratch.Get "preprint" | safeHTML }}
+            {{ .Scratch.Get "github" | safeHTML }}
+            {{ .Scratch.Get "osf" | safeHTML }}
+          </ul>
+        </li>
+      </ul>
+    </h4>
+    <br>
+
+</div>

@@ -1,0 +1,6 @@
+"0","cl <- makeCluster(3)"
+"0","raw_mods <- parLapply(cl, list(data1, data2, data3), function(dat_i) {"
+"0","  brms::brm(y ~ grp, data = dat_i)"
+"0","})"
+"0","stopCluster(cl)"
+"0","saveRDS(raw_mods, ""2020-07-30_data_driven_rope_raw_mods.rds"")"

@@ -1,0 +1,23 @@
+{{ partial "header" . }}
+
+<main>
+    <h2>{{ .Title }}</h2>
+
+    {{ range (where (.Paginator 10).Pages ".Params.unlisted" "!=" "true") }}
+        {{ if eq "Posts" $.Title }}
+           {{partial "list-item-post.html" .}}
+        {{else if eq "Projects" $.Title }}
+            {{ partial "list-item-project" . }}
+        {{else if eq "Publications" $.Title}}
+            {{ partial "list-item-publication" . }}
+        {{else}}
+            {{ partial "list-item-project" . }}
+        {{end}}
+    {{end}}
+
+</main>
+
+{{ partial "paginator" . }}
+
+
+{{ partial "footer" . }}

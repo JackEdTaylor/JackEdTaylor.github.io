@@ -1,0 +1,1 @@
+"0","seed_results <- mutate(seed_results, ov_avg = (ov_age + ov_face_width)/2)"

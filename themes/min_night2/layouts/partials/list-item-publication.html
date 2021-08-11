@@ -66,7 +66,14 @@
 {{ with .Params.video }}
 {{ $video := default "" $.Params.video }}
 {{ if ne "" $video }}
-{{ printf "<li style='display: inline; padding-right: 10px; white-space: nowrap;'><i class='fas fa-video'></i> <a href=%s>video</a></li>" . | $.Scratch.Set "osf" }}
+{{ printf "<li style='display: inline; padding-right: 10px; white-space: nowrap;'><i class='fas fa-video'></i> <a href=%s>video</a></li>" . | $.Scratch.Set "video" }}
+{{ end }}
+{{ end }}
+
+{{ with .Params.walkthrough }}
+{{ $walkthrough := default "" $.Params.walkthrough }}
+{{ if ne "" $walkthrough }}
+{{ printf "<li style='display: inline; padding-right: 10px; white-space: nowrap;'><i class='fas fa-book-open'></i> <a href=%s>walkthrough</a></li>" . | $.Scratch.Set "walkthrough" }}
 {{ end }}
 {{ end }}
 
@@ -80,6 +87,8 @@
             {{ .Scratch.Get "preprint" | safeHTML }}
             {{ .Scratch.Get "github" | safeHTML }}
             {{ .Scratch.Get "osf" | safeHTML }}
+            {{ .Scratch.Get "video" | safeHTML }}
+            {{ .Scratch.Get "walkthrough" | safeHTML }}
           </ul>
         </li>
       </ul>

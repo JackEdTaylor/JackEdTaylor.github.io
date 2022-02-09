@@ -1,7 +1,0 @@
-"0","bootstrap_permute <- function(dat) {"
-"0","  dat %>%"
-"0","    # a) bootstrap: sample rows with replacement"
-"0","    slice_sample(replace=TRUE, prop=1) %>%"
-"0","    # b) permute: sample grp without replacement"
-"0","    mutate(grp = sample(grp))"
-"0","}"

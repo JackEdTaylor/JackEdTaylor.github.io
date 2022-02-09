@@ -8,12 +8,13 @@
            {{partial "list-item-post.html" .}}
         {{else if eq "Projects" $.Title }}
             {{ partial "list-item-project" . }}
-        {{else if eq "Publications" $.Title}}
+		{{else if eq "Publications" $.Title}}
             {{ partial "list-item-publication" . }}
         {{else}}
             {{ partial "list-item-project" . }}
         {{end}}
     {{end}}
+	
 
 </main>
 

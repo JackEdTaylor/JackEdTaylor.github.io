@@ -4,8 +4,7 @@ title: 'Rating Norms Should be Calculated from Cumulative Link Mixed Effects Mod
 year: '2022'
 doi: '10.31234/osf.io/3vgwk'
 preprint: 'https://psyarxiv.com/3vgwk/'
-osf: 'https://osf.io/ntvmf/'
 github: 'https://github.com/JackEdTaylor/shinynorms'
-draft: false
-weight: 9996
+osf: 'https://osf.io/ntvmf/'
+weight: '1'
 ---

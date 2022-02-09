@@ -1,0 +1,5 @@
+authors,title,journal,issue,pages,year,doi,peer_reviewed_paper,preprint,github,osf,video,walkthrough
+"Taylor, J. E., Beith, A., & Sereno, S. C.",LexOPS: An R package and user interface for the controlled generation of word stimuli,Behavior Research Methods,52,2372-2382,2020,10.3758/s13428-020-01389-1,https://doi.org/10.3758/s13428-020-01389-1,https://psyarxiv.com/7sudw/,https://github.com/JackEdTaylor/LexOPS,,https://jackedtaylor.github.io/SIPS2021/,https://jackedtaylor.github.io/LexOPSdocs/
+Buchanan et al.,SPAML: Semantic Priming Across Many Languages,,,,2021,10.31219/osf.io/q4fjy,,https://osf.io/q4fjy/,,https://osf.io/wrpj4/,,
+"Yao, B., Taylor, J. E., & Sereno, S. C.",What can size tell us about abstract conceptual processing?,,,,2021,10.31234/osf.io/3vgwk,,https://psyarxiv.com/7dnye/,,,,
+"Taylor, J. E., Rousselet, G. A., Scheepers, S., & Sereno, S. C.",Rating Norms Should be Calculated from Cumulative Link Mixed Effects Models,,,,2022,10.31234/osf.io/3vgwk,,https://psyarxiv.com/3vgwk/,https://github.com/JackEdTaylor/shinynorms,https://osf.io/ntvmf/,,

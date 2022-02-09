@@ -1,6 +1,6 @@
 ---
 authors: 'Taylor, J. E., Beith, A., & Sereno, S. C.'
-title: 'LexOPS: An R package and user interface for the controlled generation of word stimuli'
+title: 'LexOPS: An R package and user interface for the controlled generation of word stimuli.'
 journal: 'Behavior Research Methods'
 issue: '52'
 pages: '2372-2382'

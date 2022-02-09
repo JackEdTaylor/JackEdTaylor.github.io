@@ -18,6 +18,10 @@ pubs$weight <- 1:nrow(pubs)
 for (rn in 1:nrow(pubs)) {
   p <- pubs[rn, ]
 
+  if (!grepl("[\\.\\?\\!]$", p$title)) {
+    p$title <- sprintf("%s.", p$title)
+  }
+
   key_vals <- sapply(colnames(pubs), function(key) {
     if (!all(is.na(p[[key]]))) sprintf("%s: '%s'", key, p[[key]])
   }) |>

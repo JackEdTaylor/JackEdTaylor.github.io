@@ -72,7 +72,7 @@ publishDir = "docs"
     weight = 3
 
 [[menu.icon]]
-    url = "https://www.psy.gla.ac.uk/otherstaff/?id=JT002"
+    url = "https://www.gla.ac.uk/pgrs/jacktaylor/"
     name = "fas fa-university"
     weight = 4
 

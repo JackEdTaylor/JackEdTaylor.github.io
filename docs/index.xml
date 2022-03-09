@@ -6,17 +6,22 @@
     <description>Recent content on Jack E Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Sun, 01 Aug 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 01 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LexOPS</title>
       <link>/project/01-lexops/</link>
       <pubDate>Mon, 22 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/project/01-lexops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rating Norms Should be Calculated from Cumulative Link Mixed Effects Models.</title>
+      <link>/publication/1_2022_taylor_rating/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/1_2022_taylor_rating/</guid>
       <description></description>
     </item>
     
@@ -30,11 +35,29 @@
     </item>
     
     <item>
+      <title>SPAML: Semantic Priming Across Many Languages.</title>
+      <link>/publication/2_2021_buchanan_spaml/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/2_2021_buchanan_spaml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>The Effect of Predictability on Word Form Processing in the N1</title>
       <link>/project/03-n1_pred/</link>
       <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
       
       <guid>/project/03-n1_pred/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>What can size tell us about abstract conceptual processing?</title>
+      <link>/publication/3_2021_yao_what/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/3_2021_yao_what/</guid>
       <description></description>
     </item>
     
@@ -48,29 +71,20 @@
     </item>
     
     <item>
+      <title>LexOPS: An R package and user interface for the controlled generation of word stimuli.</title>
+      <link>/publication/4_2020_taylor_lexops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/4_2020_taylor_lexops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Phase-Randomising Text</title>
       <link>/project/99-randphase/</link>
       <pubDate>Tue, 30 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>/project/99-randphase/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rating Norms Should be Calculated from Cumulative Link Mixed Effects Models</title>
-      <link>/publication/02-clmm_norms/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/02-clmm_norms/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>LexOPS: An R package and user interface for the controlled generation of word stimuli</title>
-      <link>/publication/01-lexops/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/publication/01-lexops/</guid>
       <description></description>
     </item>
     

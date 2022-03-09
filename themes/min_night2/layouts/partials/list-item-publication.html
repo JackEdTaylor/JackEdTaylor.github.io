@@ -77,10 +77,11 @@
 {{ end }}
 {{ end }}
 
+
     <h4 align="left">
       <ul>
-        <li>
-          {{ .Params.authors }} ({{ .Params.year }}). {{ .Params.title }}. <i>{{ .Params.journal }}</i>{{ .Scratch.Get "journalcomma" }}<i>{{ .Params.issue }}</i>{{ .Scratch.Get "volume" }}{{ .Scratch.Get "volumecomma" }}{{ .Params.pages }}{{ .Scratch.Get "pagesdot" }}<a href={{ .Scratch.Get "doi" }}>{{ .Scratch.Get "doi" }}</a>
+        <p>
+          {{ .Params.authors }} ({{ .Params.year }}). {{ .Params.title }} <i>{{ .Params.journal }}</i>{{ .Scratch.Get "journalcomma" }}<i>{{ .Params.issue }}</i>{{ .Scratch.Get "volume" }}{{ .Scratch.Get "volumecomma" }}{{ .Params.pages }}{{ .Scratch.Get "pagesdot" }}<a href={{ .Scratch.Get "doi" }}>{{ .Scratch.Get "doi" }}</a>
           <br></br>
           <ul>
             {{ .Scratch.Get "peer_reviewed_paper" | safeHTML }}
@@ -90,9 +91,10 @@
             {{ .Scratch.Get "walkthrough" | safeHTML }}
             {{ .Scratch.Get "video" | safeHTML }}
           </ul>
-        </li>
+        </p>
       </ul>
     </h4>
     <br>
+
 
 </div>

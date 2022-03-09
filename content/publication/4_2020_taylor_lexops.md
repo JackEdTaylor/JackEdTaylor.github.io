@@ -11,5 +11,5 @@ preprint: 'https://psyarxiv.com/7sudw/'
 github: 'https://github.com/JackEdTaylor/LexOPS'
 video: 'https://jackedtaylor.github.io/SIPS2021/'
 walkthrough: 'https://jackedtaylor.github.io/LexOPSdocs/'
-weight: '4'
+weight: 4
 ---

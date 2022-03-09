@@ -5,5 +5,5 @@ year: '2021'
 doi: '10.31219/osf.io/q4fjy'
 preprint: 'https://osf.io/q4fjy/'
 osf: 'https://osf.io/wrpj4/'
-weight: '2'
+weight: 2
 ---

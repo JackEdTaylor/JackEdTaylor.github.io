@@ -22,12 +22,16 @@ for (rn in 1:nrow(pubs)) {
     p$title <- sprintf("%s.", p$title)
   }
 
-  key_vals <- sapply(colnames(pubs), function(key) {
+  non_weight_cols <- colnames(pubs)[colnames(pubs)!="weight"]
+
+  key_vals <- sapply(non_weight_cols, function(key) {
     if (!all(is.na(p[[key]]))) sprintf("%s: '%s'", key, p[[key]])
   }) |>
     unlist()
 
-  md_text <- c("---", key_vals, "---")
+  weight_val <- sprintf("weight: %g", p$weight)
+
+  md_text <- c("---", key_vals, weight_val, "---")
 
   first_auth <- strsplit(p$authors, "[, ]", fixed=FALSE)[[1]][1]
 

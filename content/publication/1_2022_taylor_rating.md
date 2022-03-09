@@ -6,5 +6,5 @@ doi: '10.31234/osf.io/3vgwk'
 preprint: 'https://psyarxiv.com/3vgwk/'
 github: 'https://github.com/JackEdTaylor/shinynorms'
 osf: 'https://osf.io/ntvmf/'
-weight: '1'
+weight: 1
 ---

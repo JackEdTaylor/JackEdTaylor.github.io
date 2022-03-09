@@ -6,7 +6,11 @@
     <description>Recent content in permutation on Jack E Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/permutation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 30 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/permutation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Data-Driven ROPE Analysis</title>
       <link>/2020/07/30/data-driven-rope-analysis/</link>

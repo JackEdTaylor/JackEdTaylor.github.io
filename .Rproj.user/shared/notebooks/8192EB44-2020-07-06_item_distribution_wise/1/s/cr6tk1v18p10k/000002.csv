@@ -1,30 +1,0 @@
-"0","library(LexOPS)"
-"0",""
-"0","gen_faces <- face_stim %>%"
-"0","  set_options(id_col = ""stim_id"") %>%"
-"0","  split_by(gender, ""f"" ~ ""m"") %>%"
-"0","  control_for(age, -1:1) %>%"
-"0","  control_for(face_width, -0.5:0.5) %>%"
-"0","  generate(50)"
-"1","Generated 2/50 (4%). 2 total iterations, 1.00 success rate."
-"1","Generated 5/50 (10%). 5 total iterations, 1.00 success rate."
-"1","Generated 8/50 (16%). 8 total iterations, 1.00 success rate."
-"1","Generated 10/50 (20%). 10 total iterations, 1.00 success rate."
-"1","Generated 12/50 (24%). 12 total iterations, 1.00 success rate."
-"1","Generated 15/50 (30%). 15 total iterations, 1.00 success rate."
-"1","Generated 18/50 (36%). 18 total iterations, 1.00 success rate."
-"1","Generated 20/50 (40%). 20 total iterations, 1.00 success rate."
-"1","Generated 22/50 (44%). 22 total iterations, 1.00 success rate."
-"1","Generated 25/50 (50%). 26 total iterations, 0.96 success rate."
-"1","Generated 28/50 (56%). 30 total iterations, 0.93 success rate."
-"1","Generated 30/50 (60%). 33 total iterations, 0.91 success rate."
-"1","Generated 32/50 (64%). 35 total iterations, 0.91 success rate."
-"1","Generated 35/50 (70%). 40 total iterations, 0.88 success rate."
-"1","Generated 38/50 (76%). 43 total iterations, 0.88 success rate."
-"1","Generated 40/50 (80%). 46 total iterations, 0.87 success rate."
-"1","Generated 42/50 (84%). 48 total iterations, 0.88 success rate."
-"1","Generated 45/50 (90%). 52 total iterations, 0.87 success rate."
-"1","Generated 48/50 (96%). 56 total iterations, 0.86 success rate."
-"1","Generated 50/50 (100%). 58 total iterations, 0.86 success rate."
-"1","
-"

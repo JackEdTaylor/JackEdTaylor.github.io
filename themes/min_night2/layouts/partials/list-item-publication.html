@@ -35,10 +35,10 @@
 {{ end }}
 {{ end }}
 
-{{ with .Params.peer_reviewed_paper }}
-{{ $peer_reviewed_paper := default "" $.Params.peer_reviewed_paper }}
-{{ if ne "" $peer_reviewed_paper }}
-{{ printf "<li style='display: inline; padding-right: 10px;'><i class='fas fa-microscope'></i> <a href=%s>peer-reviewed paper</a></li>" . | $.Scratch.Set "peer_reviewed_paper" }}
+{{ with .Params.peer_reviewed_article }}
+{{ $peer_reviewed_article := default "" $.Params.peer_reviewed_article }}
+{{ if ne "" $peer_reviewed_article }}
+{{ printf "<li style='display: inline; padding-right: 10px;'><i class='fas fa-microscope'></i> <a href=%s>peer-reviewed article</a></li>" . | $.Scratch.Set "peer_reviewed_article" }}
 {{ end }}
 {{ end }}
 
@@ -46,6 +46,13 @@
 {{ $preprint := default "" $.Params.preprint }}
 {{ if ne "" $preprint }}
 {{ printf "<li style='display: inline; padding-right: 10px; white-space: nowrap;'><i class='fas fa-file-pdf'></i> <a href=%s>preprint</a></li>" . | $.Scratch.Set "preprint" }}
+{{ end }}
+{{ end }}
+
+{{ with .Params.pdf }}
+{{ $pdf := default "" $.Params.pdf }}
+{{ if ne "" $pdf }}
+{{ printf "<li style='display: inline; padding-right: 10px; white-space: nowrap;'><i class='fas fa-file-pdf'></i> <a href=%s>pdf</a></li>" . | $.Scratch.Set "pdf" }}
 {{ end }}
 {{ end }}
 
@@ -84,8 +91,9 @@
           {{ .Params.authors }} ({{ .Params.year }}). {{ .Params.title }} <i>{{ .Params.journal }}</i>{{ .Scratch.Get "journalcomma" }}<i>{{ .Params.issue }}</i>{{ .Scratch.Get "volume" }}{{ .Scratch.Get "volumecomma" }}{{ .Params.pages }}{{ .Scratch.Get "pagesdot" }}<a href={{ .Scratch.Get "doi" }}>{{ .Scratch.Get "doi" }}</a>
           <br></br>
           <ul>
-            {{ .Scratch.Get "peer_reviewed_paper" | safeHTML }}
+            {{ .Scratch.Get "peer_reviewed_article" | safeHTML }}
             {{ .Scratch.Get "preprint" | safeHTML }}
+            {{ .Scratch.Get "pdf" | safeHTML }}
             {{ .Scratch.Get "github" | safeHTML }}
             {{ .Scratch.Get "osf" | safeHTML }}
             {{ .Scratch.Get "walkthrough" | safeHTML }}

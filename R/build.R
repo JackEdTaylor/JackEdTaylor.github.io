@@ -11,14 +11,16 @@ pubs <- read.csv(
   na.strings = ""
 )
 
-pubs_order <- order(-pubs$year, pubs$peer_reviewed_paper, pubs$authors)
+pubs_order <- order(-pubs$year, pubs$peer_reviewed_article, pubs$authors)
 pubs <- pubs[pubs_order, ]
 pubs$weight <- 1:nrow(pubs)
 
 for (rn in 1:nrow(pubs)) {
   p <- pubs[rn, ]
 
-  if (!grepl("[\\.\\?\\!]$", p$title)) {
+  if (p$title=="" | is.na(p$title)) {
+    p$title <- ""
+  } else if (!grepl("[\\.\\?\\!]$", p$title)) {
     p$title <- sprintf("%s.", p$title)
   }
 

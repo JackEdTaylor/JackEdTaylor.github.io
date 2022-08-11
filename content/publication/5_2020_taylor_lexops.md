@@ -6,10 +6,10 @@ issue: '52'
 pages: '2372-2382'
 year: '2020'
 doi: '10.3758/s13428-020-01389-1'
-peer_reviewed_paper: 'https://doi.org/10.3758/s13428-020-01389-1'
+peer_reviewed_article: 'https://doi.org/10.3758/s13428-020-01389-1'
 preprint: 'https://psyarxiv.com/7sudw/'
 github: 'https://github.com/JackEdTaylor/LexOPS'
 video: 'https://jackedtaylor.github.io/SIPS2021/'
 walkthrough: 'https://jackedtaylor.github.io/LexOPSdocs/'
-weight: 4
+weight: 5
 ---

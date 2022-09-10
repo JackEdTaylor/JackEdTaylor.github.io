@@ -5,5 +5,5 @@ journal: 'The Processing of Orthography in Visual Word Recognition and its Sensi
 pages: '[Doctoral Thesis, University of Glasgow]'
 year: '2022'
 pdf: 'https://theses.gla.ac.uk/83081/'
-weight: 1
+weight: 2
 ---

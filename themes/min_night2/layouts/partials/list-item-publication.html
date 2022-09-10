@@ -17,7 +17,17 @@
 {{ with .Params.issue }}
 {{ $issue := default "" $.Params.issue }}
 {{ if ne "" $issue }}
-{{ printf ", " | $.Scratch.Set "volumecomma" }}
+{{ printf "(" | $.Scratch.Set "issue_l_bracket" }}
+{{ printf ")" | $.Scratch.Set "issue_r_bracket" }}
+{{ end }}
+{{ end }}
+
+{{ with .Params.article_nr }}
+{{ $article_nr := default "" $.Params.article_nr }}
+{{ if ne "" $article_nr }}
+{{ printf "Article " | $.Scratch.Set "article_nr_label" }}
+{{ printf ", " | $.Scratch.Set "article_nr_comma" }}
+{{ printf ". " | $.Scratch.Set "pagesdot" }}
 {{ end }}
 {{ end }}
 
@@ -88,7 +98,7 @@
     <h4 align="left">
       <ul>
         <p>
-          {{ .Params.authors }} ({{ .Params.year }}). {{ .Params.title }} <i>{{ .Params.journal }}</i>{{ .Scratch.Get "journalcomma" }}<i>{{ .Params.issue }}</i>{{ .Scratch.Get "volume" }}{{ .Scratch.Get "volumecomma" }}{{ .Params.pages }}{{ .Scratch.Get "pagesdot" }}<a href={{ .Scratch.Get "doi" }}>{{ .Scratch.Get "doi" }}</a>
+          {{ .Params.authors }} ({{ .Params.year }}). {{ .Params.title }} <i>{{ .Params.journal }}</i>{{ .Scratch.Get "journalcomma" }}<i>{{ .Params.volume }}</i>{{ .Scratch.Get "issue_l_bracket" }}{{ .Params.issue }}{{ .Scratch.Get "issue_r_bracket" }}{{ .Scratch.Get "volumecomma" }}{{ .Scratch.Get "article_nr_label" }}{{ .Params.article_nr }}{{.Params.article_nr_comma}}{{ .Params.pages }}{{ .Scratch.Get "pagesdot" }}<a href={{ .Scratch.Get "doi" }}>{{ .Scratch.Get "doi" }}</a>
           <ul>
             {{ .Scratch.Get "peer_reviewed_article" | safeHTML }}
             {{ .Scratch.Get "preprint" | safeHTML }}

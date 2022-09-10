@@ -2,9 +2,12 @@
 authors: 'Yao, B., Taylor, J. E., & Sereno, S. C.'
 title: 'What can size tell us about abstract conceptual processing?'
 journal: 'Journal of Memory and Language'
-pages: 'In Press'
+volume: '127'
+article_nr: '104369'
 year: '2022'
-doi: '10.31234/osf.io/7dnye'
+doi: '10.1016/j.jml.2022.104369'
+peer_reviewed_article: 'https://doi.org/10.1016/j.jml.2022.104369'
 preprint: 'https://psyarxiv.com/7dnye/'
-weight: 3
+osf: 'https://osf.io/vpkze/'
+weight: 1
 ---

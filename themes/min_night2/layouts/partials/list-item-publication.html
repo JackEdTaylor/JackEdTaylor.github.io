@@ -98,6 +98,24 @@
     <h4 align="left">
       <ul>
         <p>
+          {{ with .Params.year_heading }}
+          {{ $year_heading := default "" $.Params.year_heading }}
+          {{ if ne "" $year_heading }}
+          <br>
+          {{ end }}
+          {{ end }}
+
+          <h3>{{ .Params.year_heading }}</h3>
+
+          {{ with .Params.year_heading }}
+          {{ $year_heading := default "" $.Params.year_heading }}
+          {{ if ne "" $year_heading }}
+          <br><br>
+          {{ end }}
+          {{ end }}
+
+
+          {{ .Scratch.Get "year_heading_break" }}
           {{ .Params.authors }} ({{ .Params.year }}). {{ .Params.title }} <i>{{ .Params.journal }}</i>{{ .Scratch.Get "journalcomma" }}<i>{{ .Params.volume }}</i>{{ .Scratch.Get "issue_l_bracket" }}{{ .Params.issue }}{{ .Scratch.Get "issue_r_bracket" }}{{ .Scratch.Get "volumecomma" }}{{ .Scratch.Get "article_nr_label" }}{{ .Params.article_nr }}{{.Params.article_nr_comma}}{{ .Params.pages }}{{ .Scratch.Get "pagesdot" }}<a href={{ .Scratch.Get "doi" }}>{{ .Scratch.Get "doi" }}</a>
           <ul>
             {{ .Scratch.Get "peer_reviewed_article" | safeHTML }}
@@ -111,7 +129,8 @@
         </p>
       </ul>
     </h4>
-    <br>
 
 
 </div>
+
+

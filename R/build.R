@@ -1,5 +1,7 @@
 # script for generating YAML from csv for publications page
 
+library(dplyr)  # for lag() function
+
 path <- file.path("content", "publication")
 
 for (f in list.files(path=path, pattern="\\.md$", full.names=TRUE)) {
@@ -14,6 +16,9 @@ pubs <- read.csv(
 pubs_order <- order(-pubs$year, pubs$peer_reviewed_article, pubs$authors)
 pubs <- pubs[pubs_order, ]
 pubs$weight <- 1:nrow(pubs)
+
+pubs$year_heading <- ifelse(pubs$year != dplyr::lag(pubs$year), pubs$year, NA)
+pubs$year_heading[1] <- pubs$year[1]
 
 for (rn in 1:nrow(pubs)) {
   p <- pubs[rn, ]

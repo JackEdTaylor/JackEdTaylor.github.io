@@ -14,7 +14,7 @@ publishDir = "docs"
 [params]
     author = "Jack E Taylor"
     description = "Psychology, Words, Statistics"
-    info = "I'm a PhD student interested in visual word recognition, and how it is that we're able to read so quickly and efficiently. I use EEG, eye-tracking, and behavioural paradigms to look at top-down influences on early stages of recognising words, especially the processing of orthographic information. I'm also interested in how we represent and access semantic information like concreteness (glory vs. cliff) and semantic size (tooth vs. whale). I'm a big fan of hierarchical analyses and overly-complicated Bayesian models."
+    info = "I'm a postdoctoral researcher interested in visual word recognition, and how it is that we're able to read so quickly and efficiently. I use EEG, eye-tracking, and behavioural paradigms to look at the early stages of recognising words, especially the processing of orthographic information, and how these stages are influenced by context and expectation. I'm also interested in how we represent and access semantic information like concreteness (glory vs. cliff) and semantic size (tooth vs. whale). I'm a big fan of hierarchical analyses and overly-complicated Bayesian models."
     logo = "jacketaylor_250x250.png"
     twitterAuthor = "@JackEdTaylor"
     githubUsername = "JackEdTaylor"

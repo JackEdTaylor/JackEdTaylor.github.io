@@ -66,6 +66,13 @@
 {{ end }}
 {{ end }}
 
+{{ with .Params.poster }}
+{{ $poster := default "" $.Params.poster }}
+{{ if ne "" $poster }}
+{{ printf "<li style='display: inline; padding-right: 10px; white-space: nowrap;'><i class='fas fa-file-image'></i> <a href=%s>poster</a></li>" . | $.Scratch.Set "poster" }}
+{{ end }}
+{{ end }}
+
 {{ with .Params.github }}
 {{ $github := default "" $.Params.github }}
 {{ if ne "" $github }}
@@ -121,6 +128,7 @@
             {{ .Scratch.Get "peer_reviewed_article" | safeHTML }}
             {{ .Scratch.Get "preprint" | safeHTML }}
             {{ .Scratch.Get "pdf" | safeHTML }}
+            {{ .Scratch.Get "poster" | safeHTML }}
             {{ .Scratch.Get "github" | safeHTML }}
             {{ .Scratch.Get "osf" | safeHTML }}
             {{ .Scratch.Get "walkthrough" | safeHTML }}

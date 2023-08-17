@@ -189,6 +189,15 @@ img {
     color: #f8f8f8 !important;
 }
 
+/* horizontal rule style */
+hr {
+  border-top: 2px solid #cccccc;
+}
+
+hr.-nightmode {
+  border-top: 2px solid white;
+}
+
 /* slider attributes match navbar elements */
 #night-mode-toggle {
     font-size: 100%;

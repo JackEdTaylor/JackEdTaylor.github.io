@@ -27,7 +27,7 @@ set.seed(1)
 
 I've decided to write a brief disclaimer about this post. Please don't use this post for statistical advice. This post was mostly thinking out loud about a possible method of hypothesis testing, but in fact it just reinvents existing methods in a noisy way. Looking at the post again a few months later, I think it doesn't tell us anything we can't already get from existing methods. Another problem with this supposed method is that this defeats the whole point of a ROPE. The ROPE is a Region of *Practical* Equivalence, tying the hypothesis to some practically relevant interpretation. Arbitrarily deciding on regions with data-driven analyses isn't really informative.
 
-I've kept the post here because I know how annoying it is to follow a dead link.
+I've kept the post here to avoid any dead links.
 
 If you're interested in the problems with this post, this twitter thread might be useful:
 https://twitter.com/robustgar/status/1288810686752137217

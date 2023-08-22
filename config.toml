@@ -67,7 +67,7 @@ publishDir = "docs"
     weight = 2
 
 [[menu.icon]]
-    url = "https://www.gla.ac.uk/pgrs/jacktaylor/"
+    url = "http://www.fiebachlab.org/"
     name = "fas fa-university"
     weight = 3
 
@@ -75,8 +75,3 @@ publishDir = "docs"
     url = "https://orcid.org/0000-0003-4765-0118"
     name = "fab fa-orcid"
     weight = 4
-
-[[menu.icon]]
-    url = "mailto:j.taylor.3@research.glasgow.ac.uk"
-    name = "far fa-envelope"
-    weight = 5

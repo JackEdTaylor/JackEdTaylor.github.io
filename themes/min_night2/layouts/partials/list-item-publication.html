@@ -105,6 +105,7 @@
     <h4 align="left">
       <ul>
         <p>
+          <section id="{{ .Params.year_heading }}">
           {{ with .Params.year_heading }}
           {{ $year_heading := default "" $.Params.year_heading }}
           {{ if ne "" $year_heading }}
@@ -135,6 +136,8 @@
             {{ .Scratch.Get "walkthrough" | safeHTML }}
             {{ .Scratch.Get "video" | safeHTML }}
           </ul>
+
+          </section>
         </p>
       </ul>
     </h4>

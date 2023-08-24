@@ -1,6 +1,8 @@
 # script for generating YAML from csv for publications page
 
-library(dplyr)  # for lag() function
+message("Generating publications list …")
+
+# library(dplyr)  # for lag() function
 
 # first, remove old folders
 file.path("docs", "publication") |>
@@ -56,3 +58,5 @@ for (rn in 1:nrow(pubs)) {
   writeLines(md_text, md_conn)
   close(md_conn)
 }
+
+message("Finished generating publications list …")

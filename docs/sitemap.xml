@@ -12,12 +12,9 @@
   </url><url>
     <loc>/publication/2_2023_buchanan_measuring/</loc>
   </url><url>
-    <loc>/project/03-n1_pred/</loc>
-    <lastmod>2021-08-01T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>/publication/3_2023_maciejewski_type/</loc>
   </url><url>
-    <loc>/project/04-sips2021/</loc>
+    <loc>/project/03-sips2021/</loc>
     <lastmod>2021-06-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/publication/4_2022_taylor_rating/</loc>
@@ -28,34 +25,31 @@
   </url><url>
     <loc>/publication/7_2020_taylor_lexops/</loc>
   </url><url>
+    <loc>/project/98-bubbles/</loc>
+    <lastmod>2023-04-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>/project/99-randphase/</loc>
     <lastmod>2020-06-30T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2021-08-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/matlab/</loc>
-    <lastmod>2021-08-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/predictability/</loc>
-    <lastmod>2021-08-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/project/</loc>
-    <lastmod>2021-08-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/tags/psycholinguistics/</loc>
-    <lastmod>2021-08-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/python/</loc>
-    <lastmod>2021-08-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/r/</loc>
-    <lastmod>2021-08-01T00:00:00+00:00</lastmod>
+    <loc>/tags/stimuli/</loc>
+    <lastmod>2023-04-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2021-08-01T00:00:00+00:00</lastmod>
+    <lastmod>2023-04-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/lexops/</loc>
+    <lastmod>2021-06-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/tags/r/</loc>
     <lastmod>2021-06-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/tags/reproducibility/</loc>
@@ -82,7 +76,7 @@
     <loc>/2020/07/06/item-wise-and-distribution-wise-matching/</loc>
     <lastmod>2020-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>/tags/stimuli/</loc>
+    <loc>/tags/psycholinguistics/</loc>
     <lastmod>2020-07-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>/categories/</loc>

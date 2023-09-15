@@ -6,7 +6,7 @@
     <description>Recent content in R on Jack E Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Sun, 01 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LexOPS</title>
       <link>/project/01-lexops/</link>
@@ -26,20 +26,11 @@
     </item>
     
     <item>
-      <title>The Effect of Predictability on Word Form Processing in the N1</title>
-      <link>/project/03-n1_pred/</link>
-      <pubDate>Sun, 01 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/project/03-n1_pred/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Matching Stimuli (or Anything) Reproducibly</title>
-      <link>/project/04-sips2021/</link>
+      <link>/project/03-sips2021/</link>
       <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>/project/04-sips2021/</guid>
+      <guid>/project/03-sips2021/</guid>
       <description></description>
     </item>
     

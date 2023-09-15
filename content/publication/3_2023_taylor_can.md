@@ -6,5 +6,5 @@ doi: '10.1101/2023.08.07.552265'
 preprint: 'https://www.biorxiv.org/content/10.1101/2023.08.07.552265v1'
 osf: 'https://osf.io/389ce/'
 poster: 'https://jackedtaylor.github.io/pwv-poster/poster.pdf'
-weight: 2
+weight: 3
 ---

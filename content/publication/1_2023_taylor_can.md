@@ -7,5 +7,6 @@ preprint: 'https://www.biorxiv.org/content/10.1101/2023.08.07.552265v1'
 osf: 'https://osf.io/389ce/'
 poster: 'https://jackedtaylor.github.io/pwv-poster/poster.pdf'
 is_first_author: 'TRUE'
-weight: 3
+year_heading: '2023'
+weight: 1
 ---

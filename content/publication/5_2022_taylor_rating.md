@@ -8,5 +8,6 @@ peer_reviewed_article: 'https://doi.org/10.3758/s13428-022-01814-7'
 preprint: 'https://psyarxiv.com/3vgwk/'
 github: 'https://github.com/JackEdTaylor/shinynorms'
 osf: 'https://osf.io/ntvmf/'
+is_first_author: 'TRUE'
 weight: 5
 ---

@@ -12,6 +12,7 @@ preprint: 'https://psyarxiv.com/7sudw/'
 github: 'https://github.com/JackEdTaylor/LexOPS'
 video: 'https://jackedtaylor.github.io/SIPS2021/'
 walkthrough: 'https://jackedtaylor.github.io/LexOPSdocs/'
+is_first_author: 'TRUE'
 year_heading: '2020'
 weight: 7
 ---

@@ -9,5 +9,6 @@ preprint: 'https://psyarxiv.com/3vgwk/'
 github: 'https://github.com/JackEdTaylor/shinynorms'
 osf: 'https://osf.io/ntvmf/'
 is_first_author: 'TRUE'
-weight: 5
+year_heading: '2022'
+weight: 4
 ---

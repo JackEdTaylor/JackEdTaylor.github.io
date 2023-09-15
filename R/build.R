@@ -23,7 +23,7 @@ pubs <- read.csv(
 
 pubs$is_first_author <- substr(pubs$authors, 0, 6) == "Taylor"
 
-pubs_order <- order(-pubs$year, pubs$peer_reviewed_article, -pubs$is_first_author, pubs$authors)
+pubs_order <- order(-pubs$year, is.na(pubs$peer_reviewed_article), -pubs$is_first_author, pubs$authors)
 pubs <- pubs[pubs_order, ]
 pubs$weight <- 1:nrow(pubs)
 

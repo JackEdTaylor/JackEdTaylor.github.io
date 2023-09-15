@@ -9,7 +9,7 @@ file.path("docs", "publication") |>
   dir(pattern="\\d\\_\\d{4}.*", full.names=TRUE) |>
   unlink(recursive=TRUE)
 
-# now, rebuild publcations from the csv
+# now, rebuild publications from the csv
 path <- file.path("content", "publication")
 
 for (f in list.files(path=path, pattern="\\.md$", full.names=TRUE)) {

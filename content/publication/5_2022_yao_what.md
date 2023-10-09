@@ -10,5 +10,6 @@ peer_reviewed_article: 'https://doi.org/10.1016/j.jml.2022.104369'
 preprint: 'https://psyarxiv.com/7dnye/'
 osf: 'https://osf.io/vpkze/'
 is_first_author: 'FALSE'
+year_heading: '2022'
 weight: 5
 ---

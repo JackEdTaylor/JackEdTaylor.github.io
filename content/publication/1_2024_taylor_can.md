@@ -6,6 +6,7 @@ doi: '10.1101/2023.08.07.552265'
 preprint: 'https://doi.org/10.1101/2023.08.07.552265'
 osf: 'https://osf.io/389ce/'
 poster: 'https://jackedtaylor.github.io/pwv-poster/poster.pdf'
+GIN: 'https://gin.g-node.org/JackEdTaylor/Picture-Word-N1'
 is_first_author: 'TRUE'
 year_heading: '2024'
 weight: 1

@@ -87,6 +87,13 @@
 {{ end }}
 {{ end }}
 
+{{ with .Params.GIN }}
+{{ $GIN := default "" $.Params.GIN }}
+{{ if ne "" $GIN }}
+{{ printf "<li style='display: inline; padding-right: 10px; white-space: nowrap;'><i class='fa fa-box-open'></i> <a href=%s>GIN</a></li>" . | $.Scratch.Set "GIN" }}
+{{ end }}
+{{ end }}
+
 {{ with .Params.video }}
 {{ $video := default "" $.Params.video }}
 {{ if ne "" $video }}
@@ -133,6 +140,7 @@
             {{ .Scratch.Get "poster" | safeHTML }}
             {{ .Scratch.Get "github" | safeHTML }}
             {{ .Scratch.Get "osf" | safeHTML }}
+            {{ .Scratch.Get "GIN" | safeHTML }}
             {{ .Scratch.Get "walkthrough" | safeHTML }}
             {{ .Scratch.Get "video" | safeHTML }}
           </ul>

@@ -16,56 +16,65 @@
     </item>
     
     <item>
-      <title>Rating norms should be calculated from Cumulative Link Mixed Effects Models.</title>
-      <link>/publication/2_2023_taylor_rating/</link>
+      <title>Beyond Letters: Optimal Transport as a Model for Sub-Letter Orthographic Processing.</title>
+      <link>/publication/2_2024_taylor_beyond/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2_2023_taylor_rating/</guid>
+      <guid>/publication/2_2024_taylor_beyond/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rating norms should be calculated from Cumulative Link Mixed Effects Models.</title>
+      <link>/publication/3_2023_taylor_rating/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/3_2023_taylor_rating/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Measuring the Semantic Priming Effect Across Many Languages.</title>
-      <link>/publication/3_2023_buchanan_measuring/</link>
+      <link>/publication/4_2023_buchanan_measuring/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/publication/3_2023_buchanan_measuring/</guid>
+      <guid>/publication/4_2023_buchanan_measuring/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Type of polysemy matters: Evidence from semantic relatedness decisions.</title>
-      <link>/publication/4_2023_maciejewski_type/</link>
+      <link>/publication/5_2023_maciejewski_type/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/publication/4_2023_maciejewski_type/</guid>
+      <guid>/publication/5_2023_maciejewski_type/</guid>
       <description></description>
     </item>
     
     <item>
       <title>What can size tell us about abstract conceptual processing?</title>
-      <link>/publication/5_2022_yao_what/</link>
+      <link>/publication/6_2022_yao_what/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/publication/5_2022_yao_what/</guid>
+      <guid>/publication/6_2022_yao_what/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>/publication/6_2022_taylor_na/</link>
+      <link>/publication/7_2022_taylor_na/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/publication/6_2022_taylor_na/</guid>
+      <guid>/publication/7_2022_taylor_na/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LexOPS: An R package and user interface for the controlled generation of word stimuli.</title>
-      <link>/publication/7_2020_taylor_lexops/</link>
+      <link>/publication/8_2020_taylor_lexops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/publication/7_2020_taylor_lexops/</guid>
+      <guid>/publication/8_2020_taylor_lexops/</guid>
       <description></description>
     </item>
     

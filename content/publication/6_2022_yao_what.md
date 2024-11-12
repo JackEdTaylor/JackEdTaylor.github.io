@@ -11,5 +11,5 @@ preprint: 'https://psyarxiv.com/7dnye/'
 osf: 'https://osf.io/vpkze/'
 is_first_author: 'FALSE'
 year_heading: '2022'
-weight: 5
+weight: 6
 ---

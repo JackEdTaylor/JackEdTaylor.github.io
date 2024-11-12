@@ -12,5 +12,5 @@ github: 'https://github.com/JackEdTaylor/shinynorms'
 osf: 'https://osf.io/ntvmf/'
 is_first_author: 'TRUE'
 year_heading: '2023'
-weight: 2
+weight: 3
 ---

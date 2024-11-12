@@ -87,10 +87,17 @@
 {{ end }}
 {{ end }}
 
-{{ with .Params.GIN }}
-{{ $GIN := default "" $.Params.GIN }}
-{{ if ne "" $GIN }}
-{{ printf "<li style='display: inline; padding-right: 10px; white-space: nowrap;'><i class='fa fa-box-open'></i> <a href=%s>GIN</a></li>" . | $.Scratch.Set "GIN" }}
+{{ with .Params.gin }}
+{{ $gin := default "" $.Params.gin }}
+{{ if ne "" $gin }}
+{{ printf "<li style='display: inline; padding-right: 10px; white-space: nowrap;'><i class='fa fa-box-open'></i> <a href=%s>gin</a></li>" . | $.Scratch.Set "gin" }}
+{{ end }}
+{{ end }}
+
+{{ with .Params.openneuro }}
+{{ $openneuro := default "" $.Params.openneuro }}
+{{ if ne "" $openneuro }}
+{{ printf "<li style='display: inline; padding-right: 10px; white-space: nowrap;'><i class='fa fa-database'></i> <a href=%s>openneuro</a></li>" . | $.Scratch.Set "openneuro" }}
 {{ end }}
 {{ end }}
 

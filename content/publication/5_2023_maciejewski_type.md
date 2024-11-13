@@ -1,6 +1,7 @@
 ---
 authors: 'Maciejewski, G., Taylor, J. E., & Klepousniotou, E.'
 title: 'Type of polysemy matters: Evidence from semantic relatedness decisions.'
+journal: 'PsyArXiv'
 year: '2023'
 doi: '10.31234/osf.io/f8xys'
 preprint: 'https://psyarxiv.com/f8xys/'

@@ -1,6 +1,7 @@
 ---
 authors: 'Taylor, J.E., Sinn, R., Iaia, C., & Fiebach, C. J.'
 title: 'Beyond Letters: Optimal Transport as a Model for Sub-Letter Orthographic Processing.'
+journal: 'bioRxiv'
 year: '2024'
 doi: '10.1101/2024.11.11.622929'
 preprint: 'https://www.biorxiv.org/content/10.1101/2024.11.11.622929'

@@ -1,10 +1,17 @@
 <div class="item">
 
 {{ with .Params.journal }}
-{{ $journal := default "" $.Params.journal }}
-{{ if ne "" $journal }}
-{{ printf ", " | $.Scratch.Set "journalcomma" }}
-{{ end }}
+  {{ $journal := default "" $.Params.journal }}
+  {{ $volume := default "" $.Params.volume }}
+  {{ $issue := default "" $.Params.issue }}
+  {{ $article_nr := default "" $.Params.article_nr }}
+  {{ if ne "" $journal }}
+    {{ if and (ne "" $volume) (ne "" $issue) (ne "" $article_nr) }}
+      {{ printf ", " | $.Scratch.Set "journalcomma" }}
+    {{ else }}
+      {{ printf ". " | $.Scratch.Set "journalcomma" }}
+    {{ end }}
+  {{ end }}
 {{ end }}
 
 {{ with .Params.volume }}

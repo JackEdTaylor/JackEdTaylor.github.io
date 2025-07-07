@@ -6,11 +6,11 @@
     <description>Recent content in Tags on Jack E Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Wed, 05 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>python</title>
       <link>/tags/python/</link>
-      <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>/tags/python/</guid>
       <description></description>
@@ -19,9 +19,45 @@
     <item>
       <title>stimuli</title>
       <link>/tags/stimuli/</link>
-      <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
       
       <guid>/tags/stimuli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>norming</title>
+      <link>/tags/norming/</link>
+      <pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/norming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>psycholinguistics</title>
+      <link>/tags/psycholinguistics/</link>
+      <pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/psycholinguistics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reproducibility</title>
+      <link>/tags/reproducibility/</link>
+      <pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/reproducibility/</guid>
       <description></description>
     </item>
     
@@ -31,24 +67,6 @@
       <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>/tags/lexops/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>reproducibility</title>
-      <link>/tags/reproducibility/</link>
-      <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/reproducibility/</guid>
       <description></description>
     </item>
     
@@ -85,15 +103,6 @@
       <pubDate>Thu, 30 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>/tags/statistics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>psycholinguistics</title>
-      <link>/tags/psycholinguistics/</link>
-      <pubDate>Mon, 06 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/psycholinguistics/</guid>
       <description></description>
     </item>
     

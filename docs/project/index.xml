@@ -6,7 +6,7 @@
     <description>Recent content in Projects on Jack E Taylor</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-uk</language>
-    <lastBuildDate>Wed, 05 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="/project/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LexOPS</title>
       <link>/project/01-lexops/</link>
@@ -27,19 +27,28 @@
     
     <item>
       <title>Matching Stimuli (or Anything) Reproducibly</title>
-      <link>/project/03-sips2021/</link>
+      <link>/project/03-sips/</link>
       <pubDate>Thu, 24 Jun 2021 00:00:00 +0000</pubDate>
       
-      <guid>/project/03-sips2021/</guid>
+      <guid>/project/03-sips/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Bubble-Masking Images</title>
-      <link>/project/98-bubbles/</link>
-      <pubDate>Wed, 05 Apr 2023 00:00:00 +0000</pubDate>
+      <title>shinynorms</title>
+      <link>/project/04-shinynorms/</link>
+      <pubDate>Tue, 27 Feb 2024 00:00:00 +0000</pubDate>
       
-      <guid>/project/98-bubbles/</guid>
+      <guid>/project/04-shinynorms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bubblemask</title>
+      <link>/project/98-bubblemask/</link>
+      <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>/project/98-bubblemask/</guid>
       <description></description>
     </item>
     

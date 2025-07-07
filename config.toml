@@ -62,12 +62,12 @@ publishDir = "docs"
     weight = 1
 
 [[menu.icon]]
-    url = "https://twitter.com/JackEdTaylor/"
-    name = "fab fa-twitter"
+    url = "https://bsky.app/profile/jacketaylor.bsky.social"
+    name = "fab fa-bluesky"
     weight = 2
 
 [[menu.icon]]
-    url = "http://www.fiebachlab.org/"
+    url = "http://www.fiebachlab.org"
     name = "fas fa-university"
     weight = 3
 

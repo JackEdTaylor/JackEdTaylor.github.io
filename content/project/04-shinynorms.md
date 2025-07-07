@@ -7,7 +7,6 @@ tags:
 - R
 - reproducibility
 - norming
-- psycholinguistics
 title: shinynorms
 weight: 4
 ---

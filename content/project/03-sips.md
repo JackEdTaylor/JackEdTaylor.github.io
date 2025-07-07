@@ -8,5 +8,5 @@ tags:
 - reproducibility
 - LexOPS
 title: Matching Stimuli (or Anything) Reproducibly
-weight: 4
+weight: 3
 ---

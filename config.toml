@@ -63,7 +63,7 @@ publishDir = "docs"
 
 [[menu.icon]]
     url = "https://bsky.app/profile/jacketaylor.bsky.social"
-    name = "fab fa-bluesky"
+    name = "fab fa-twitter"  # until bluesky logo included in blogdown's current fontawesome version
     weight = 2
 
 [[menu.icon]]

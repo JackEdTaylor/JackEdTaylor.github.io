@@ -108,6 +108,13 @@
 {{ end }}
 {{ end }}
 
+{{ with .Params.codeocean }}
+{{ $codeocean := default "" $.Params.codeocean }}
+{{ if ne "" $codeocean }}
+{{ printf "<li style='display: inline; padding-right: 10px; white-space: nowrap;'><i class='fa fa-box-open'></i> <a href=%s>codeocean</a></li>" . | $.Scratch.Set "codeocean" }}
+{{ end }}
+{{ end }}
+
 {{ with .Params.video }}
 {{ $video := default "" $.Params.video }}
 {{ if ne "" $video }}
@@ -156,6 +163,7 @@
             {{ .Scratch.Get "osf" | safeHTML }}
             {{ .Scratch.Get "gin" | safeHTML }}
             {{ .Scratch.Get "openneuro" | safeHTML }}
+            {{ .Scratch.Get "codeocean" | safeHTML }}
             {{ .Scratch.Get "walkthrough" | safeHTML }}
             {{ .Scratch.Get "video" | safeHTML }}
           </ul>

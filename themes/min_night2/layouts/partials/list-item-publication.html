@@ -5,11 +5,12 @@
   {{ $volume := default "" $.Params.volume }}
   {{ $issue := default "" $.Params.issue }}
   {{ $article_nr := default "" $.Params.article_nr }}
+  {{ $pages := default "" $.Params.pages }}
   {{ if ne "" $journal }}
-    {{ if and (ne "" $volume) (ne "" $issue) (ne "" $article_nr) }}
-      {{ printf ", " | $.Scratch.Set "journalcomma" }}
-    {{ else }}
+    {{ if and (ne "" $volume) (ne "" $issue) (ne "" $article_nr) (ne "" $pages) }}
       {{ printf ". " | $.Scratch.Set "journalcomma" }}
+    {{ else }}
+      {{ printf ", " | $.Scratch.Set "journalcomma" }}
     {{ end }}
   {{ end }}
 {{ end }}
